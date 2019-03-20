@@ -1,0 +1,52 @@
+<resources>
+
+    <!--String related to main screen -->
+    <string name="app_name">fireBase</string>
+    <string name="name">Name</string>
+    <string name="pass">Password</string>
+    <string name="login">Login</string>
+    <string name="forget">Forget Password</string>
+    <string name="create">Create Account</string>
+    <string name="error">Tên đã có người sử dụng</string>
+    <string name="ok">OK</string>
+    <string name="wrongInfo">Thông tin đăng nhập không chính xác, vui lòng kiếm tra lại </string>
+    <string name="successful">Đăng nhập thành công,xin chào</string>
+    <string name="title_activity_sign_up">Sign up</string>
+
+    <!--End of main screen -->
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email đã dùng để đăng kí tài khoản</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="username">Tên đăng nhập</string>
+    <string name="date">Ngày tháng năm sinh :</string>
+    <string name="male">Nam</string>
+    <string name="female">Nữ</string>
+    <string name="others">Khác</string>
+    <string name="gender">Giới tính :</string>
+    <string name="cancel">Huỷ</string>
+    <string name="blank">Vui lòng không bỏ trống ô này </string>
+    <string name="registerOK">Tạo tài khoản thành công.</string>
+    <string name="title_activity_forget_password">Forget Password</string>
+    <string name="error_invalid_email">Địa chỉ email không hợp lệ!</string>
+    <string name="error_invalid_password">Password cần lớn hơn 4 kí tự</string>
+    <string name="invalidDate">Ngày sinh không hợp lệ. Điền như ví dụ sau : 08/10/1998 </string>
+    <string name="send">Send</string>
+    <string name="emailNotFound">Email không chính xác </string>
+    <string name="infoNotFound"> Không tìm thấy người dùng này.</string>
+    <string name="passwordGenerated">Mật khẩu mới đã được gửi đến email của bạn.</string>
+    <!-- End of login -->
+
+    <!--  String related to userInformation    -->
+    <string name="title_activity_user_information">Thông tin User</string>
+    <string name="I_userName">Tên người dùng : </string>
+    <string name="I_email">Email : </string>
+    <string name="role">Loại tài khoản : </string>
+    <string name="updateInfo">Chỉnh sửa thông tin</string>
+    <string name="action_settings">what</string>
+    <!--End of userInformation-->
+
+</resources>
+

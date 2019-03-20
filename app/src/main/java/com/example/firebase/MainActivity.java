@@ -1,0 +1,191 @@
+package com.example.firebase;
+
+import android.app.AlertDialog;
+import android.content.Intent;
+import android.os.Handler;
+import android.support.annotation.NonNull;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
+
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
+
+public class MainActivity extends AppCompatActivity {
+
+
+    String nameSaved;
+    EditText editText ;
+
+    public DatabaseReference mDatabase;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+
+        Intent getIntent = getIntent();
+        nameSaved = getIntent.getStringExtra("nameV");
+
+        editText = findViewById(R.id.name);
+        if(nameSaved != null){
+            editText.setText(nameSaved);
+        }
+    }
+
+    public void onCreateAccount(View view){
+        Intent intent = new Intent(this,SignUpActivity.class);
+        startActivity(intent);
+    }
+
+    public void goToInfoPage(final User user){
+        final Intent intent = new Intent(this, UserInformation.class);
+        Handler handler = new Handler();
+        Runnable my_runnable = new Runnable() {
+            @Override
+            public void run() {
+                intent.putExtra("userInfo",user);
+                startActivity(intent);
+            }
+        };
+            handler.postDelayed( my_runnable,1000);
+    }
+
+    void showAlert(int typeOfAlert,String message){
+        // 0 : nameExisted
+        // 1 : wrongPass
+        // 2 : name not found
+        // 3 : login successful
+
+
+        if(typeOfAlert == 0){
+            AlertDialog.Builder adb = new AlertDialog.Builder(MainActivity.this);
+
+
+            adb.setMessage(R.string.error);
+            adb.setTitle("Error");
+            AlertDialog ad = adb.create();
+            ad.show();
+        }
+        if(typeOfAlert == 1){
+            AlertDialog.Builder adb = new AlertDialog.Builder(MainActivity.this);
+
+
+            adb.setMessage(R.string.wrongInfo);
+            adb.setTitle("Error");
+            AlertDialog ad = adb.create();
+            ad.show();
+        }
+        if(typeOfAlert == 2){
+            AlertDialog.Builder adb = new AlertDialog.Builder(MainActivity.this);
+
+
+            adb.setMessage(R.string.wrongInfo);
+            adb.setTitle("Error");
+            AlertDialog ad = adb.create();
+            ad.show();
+        }
+        if(typeOfAlert == 3){
+            AlertDialog.Builder adb = new AlertDialog.Builder(MainActivity.this);
+
+
+            adb.setMessage(getResources().getString(R.string.successful)+" "+message);
+            adb.setTitle("Successful");
+            AlertDialog ad = adb.create();
+            ad.show();
+        }
+
+    }
+
+    public void onGetData(View view) {
+        final EditText name = findViewById(R.id.name);
+        EditText pass = findViewById(R.id.pass);
+
+        final String nameV = name.getText().toString();
+
+        String passV = pass.getText().toString();
+        if(nameV.isEmpty() || passV.isEmpty()){
+            showAlert(1," ");
+        }
+        else{
+            try {
+                // Create MessageDigest instance for MD5
+                MessageDigest md = MessageDigest.getInstance("MD5");
+                //Add password bytes to digest
+                md.update(passV.getBytes());
+                //Get the hash's bytes
+                byte[] bytes = md.digest();
+                //This bytes[] has bytes in decimal format;
+                //Convert it to hexadecimal format
+                StringBuilder sb = new StringBuilder();
+                for(int i=0; i< bytes.length ;i++)
+                {
+                    sb.append(Integer.toString((bytes[i] & 0xff) + 0x100, 16).substring(1));
+                }
+                //Get complete hashed password in hex format
+
+                passV = sb.toString();
+            }
+
+
+            catch (NoSuchAlgorithmException e)
+            {
+                e.printStackTrace();
+            }
+
+            final String passValue = passV;
+            Log.w("vcl2",passV);
+
+            mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot){
+                    if (dataSnapshot.hasChild(nameV)){
+                        User user = dataSnapshot.child(nameV).getValue(User.class);
+                        Log.w("vcl",passValue);
+                        if(user.password.equals(passValue)){
+
+                            showAlert(3,user.name);
+                            goToInfoPage(user);
+
+                        }
+                        else{
+                            showAlert(1,passValue);
+                        }
+
+
+                    }
+                    else{
+                        showAlert(2," ");
+                    }
+
+                }
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+                }
+            });
+        }
+
+
+
+
+    }
+
+    public void onForgetPassword(View view){
+        Intent intent = new Intent(this,ForgetPasswordActivity.class);
+        startActivity(intent);
+    }
+}
