@@ -67,6 +67,7 @@ public class SignUpActivity extends AppCompatActivity {
     String passValue;
     boolean check;
     public DatabaseReference mDatabase;
+    Aleart aleart;
 
     EditText name ;
     EditText pass ;
@@ -102,7 +103,13 @@ public class SignUpActivity extends AppCompatActivity {
            public void onCheckedChanged(RadioGroup group, int checkedId) {
                selectedID = RG.getCheckedRadioButtonId();
                gender = findViewById(selectedID);
-               genderCheck(gender.getText().toString());
+               if(gender != null){
+                   String genderString = gender.getText().toString();
+                   genderCheck(genderString);
+
+               }
+
+
 
                TextView tv = findViewById(R.id.genderError);
                tv.setText(" ");
@@ -251,90 +258,6 @@ public class SignUpActivity extends AppCompatActivity {
 
 
 
-    private void onGoback(boolean check){
-        final Intent intent = new Intent(this, MainActivity.class);
-        Handler handler = new Handler();
-        Runnable my_runnable = new Runnable() {
-            @Override
-            public void run() {
-                intent.putExtra("nameV",name.getText().toString());
-                startActivity(intent);
-            }
-        };
-        if(check){
-              handler.postDelayed( my_runnable,1000);
-
-            }
-
-        }
-    void showAlert(int typeOfAlert,String message){
-        // 0 : nameExisted
-        // 1 : wrongPass
-        // 2 : name not found
-        // 3 : login successfully
-        // 4 : Blank information
-        // 5 : Register successfully
-
-
-
-        if(typeOfAlert == 0){
-            AlertDialog.Builder adb = new AlertDialog.Builder(SignUpActivity.this);
-
-
-            adb.setMessage(R.string.error);
-            adb.setTitle("Error");
-            AlertDialog ad = adb.create();
-            ad.show();
-        }
-        if(typeOfAlert == 1){
-            AlertDialog.Builder adb = new AlertDialog.Builder(SignUpActivity.this);
-
-
-            adb.setMessage(R.string.wrongInfo);
-            adb.setTitle("Error");
-            AlertDialog ad = adb.create();
-            ad.show();
-        }
-        if(typeOfAlert == 2){
-            AlertDialog.Builder adb = new AlertDialog.Builder(SignUpActivity.this);
-
-
-            adb.setMessage(R.string.wrongInfo);
-            adb.setTitle("Error");
-            AlertDialog ad = adb.create();
-            ad.show();
-        }
-        if(typeOfAlert == 3){
-            AlertDialog.Builder adb = new AlertDialog.Builder(SignUpActivity.this);
-
-
-            adb.setMessage(getResources().getString(R.string.successful)+" "+message);
-            adb.setTitle("Successful");
-            AlertDialog ad = adb.create();
-            ad.show();
-        }
-        if(typeOfAlert == 4){
-            AlertDialog.Builder adb = new AlertDialog.Builder(SignUpActivity.this);
-
-
-            adb.setMessage(getResources().getString(R.string.blank)+" "+message);
-            adb.setTitle("Error");
-            AlertDialog ad = adb.create();
-            ad.show();
-        }
-        if(typeOfAlert == 5){
-            AlertDialog.Builder adb = new AlertDialog.Builder(SignUpActivity.this);
-
-
-            adb.setMessage(getResources().getString(R.string.registerOK)+" "+message);
-            adb.setTitle("Congratulation!");
-            AlertDialog ad = adb.create();
-            ad.show();
-        }
-
-
-    }
-
     public boolean checkValidInput(String email, String passwword,String date,String name, String gender){
         boolean emailCheck = isEmailValid(email);
         boolean passwordCheck = isPasswordValid(passwword);
@@ -368,7 +291,6 @@ public class SignUpActivity extends AppCompatActivity {
         final String genderV = genderValidation;
         String passV = pass.getText().toString();
 
-//        Log.w("ok",Boolean.toString(isPasswordValid(passV)));
 
         if(!checkValidInput(emailV,passV,dateV,nameV,genderV)){
            return;
@@ -405,24 +327,26 @@ public class SignUpActivity extends AppCompatActivity {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     if(dataSnapshot.hasChild(nameV)){
-                        showAlert(0," ");
+                        aleart = new Aleart(1,getString(R.string.error),SignUpActivity.this,"","");
                     }
                     else{
                         try{
                             check = true;
-                            User user = new User(nameV, passValue,emailV,dateV,genderV,"user");
+                            User user = new User(nameV, passValue,emailV,dateV,genderV,"user","");
                             String userId = nameV;
                             mDatabase.child(userId).setValue(user);
 
                         }
                         finally {
-                            showAlert(5," ");
-                            onGoback(check);
+
+                            aleart = new Aleart(2,getString(R.string.registerOK),SignUpActivity.this,"nameV",name.getText().toString());
                         }
 
                     }
 
                 }
+
+
 
                 @Override
                 public void onCancelled(@NonNull DatabaseError databaseError) {
@@ -435,7 +359,6 @@ public class SignUpActivity extends AppCompatActivity {
         }
 
     }
-
 
 }
 

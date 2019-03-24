@@ -1,63 +1,215 @@
 package com.example.firebase;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
-import android.graphics.Color;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.Gravity;
+import android.util.Log;
 import android.view.View;
-import android.view.Window;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.bumptech.glide.Glide;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.OnProgressListener;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.UUID;
 
 public class UserInformation extends AppCompatActivity {
 
     User user;
     TextView i_username;
-    TextView i_email;
-    TextView i_birthday;
-    TextView i_gender;
+    EditText i_email;
+    EditText i_birthday;
+    EditText i_gender;
     TextView i_role;
+    public ImageView imageView;
+    public Uri filePath;
+    private String avaUrl;
+    private final int PICK_IMAGE_REQUEST = 71;
+
+
+    FirebaseStorage storage;
+    StorageReference storageReference;
+    StorageReference loadReference;
+
+    DatabaseReference mDatabase;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_user_information);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        storage = FirebaseStorage.getInstance();
+        storageReference = storage.getReference();
+        loadReference = storage.getReference().child("avatars/");
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+
+        // ---------getting user info from Login page-----------
+        Intent intent = getIntent();
+        user = (User) intent.getSerializableExtra("userInfo") ;
+        //----------end of getting user info from Login page------
+
+        FloatingActionButton fab =  findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                ChangeData();
             }
         });
 
 
 
 
-        Intent intent = getIntent();
-        user = (User) intent.getSerializableExtra("userInfo");
 
+        String hiddenEmail = user.email.substring(0,10)+"..@..";
 
         i_username = findViewById(R.id.i_username_field);
         i_email = findViewById(R.id.i_email_field);
         i_birthday = findViewById(R.id.i_birthday_field);
         i_gender = findViewById(R.id.i_gender_field);
         i_role = findViewById(R.id.i_role_field);
+        imageView = findViewById(R.id.avatar);
+        imageView.bringToFront();
 
         i_username.setText(user.name);
-        i_email.setText(user.email);
+        i_email.setText(hiddenEmail);
         i_birthday.setText(user.date);
         i_gender.setText(user.gender);
         i_role.setText(user.role);
+
+
+        // -------------------------- getting user's avatar-------------------------
+
+        if(!user.avatarUrl.isEmpty()){
+            avaUrl = user.avatarUrl;
+            Glide.with(this)
+                    .load(avaUrl)
+                    .into(imageView);
+        }
+
+
+        // ---------------------------- end of getting user's avatar ----------------
+
     }
 
 
 
+    @Override
+    public void onBackPressed(){
+        super.onBackPressed();
+        Intent intent = new Intent(this,MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void ChangeData(){
+        Intent intent = new Intent(this, ChangeInfoActivity.class);
+        String username = i_username.getText().toString();
+        if(username!=null){
+            intent.putExtra("nameV",username);
+            startActivity(intent);
+        }
+
+    }
+
+
+
+
+    private void chooseImage(){
+        Intent intent = new Intent();
+        intent.setType("image/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        startActivityForResult(Intent.createChooser(intent, "Chọn ảnh ..."), PICK_IMAGE_REQUEST);
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK
+                && data != null && data.getData() != null )
+        {
+            filePath = data.getData();
+            try {
+                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), filePath);
+                imageView.setImageBitmap(bitmap);
+
+                //upload image to db storage
+                uploadImage(filePath);
+            }
+            catch (IOException e)
+            {
+                e.printStackTrace();
+            }
+
+
+        }
+    }
+    private void uploadImage(final Uri filePath){
+
+        if(filePath != null)
+        {
+            final ProgressDialog progressDialog = new ProgressDialog(this);
+            progressDialog.setTitle("Uploading...");
+            progressDialog.show();
+
+            final StorageReference ref = storageReference.child("avatars/"+ UUID.randomUUID().toString());
+
+            ref.putFile(filePath)
+                    .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                            progressDialog.dismiss();
+                            ref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                @Override
+                                public void onSuccess(Uri uri) {
+                                    mDatabase.child(user.name).child("avatarUrl").setValue(uri.toString());
+                                }
+                            });
+                            Toast.makeText(UserInformation.this, "Uploaded", Toast.LENGTH_SHORT).show();
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            progressDialog.dismiss();
+                            Toast.makeText(UserInformation.this, "Failed "+e.getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    })
+                    .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
+                            double progress = (100.0*taskSnapshot.getBytesTransferred()/taskSnapshot
+                                    .getTotalByteCount());
+                            progressDialog.setMessage("Uploaded "+(int)progress+"%");
+                        }
+                    });
+        }
+    }
+
+
+    public void onChangeAvatar(View view){
+        chooseImage();
+
+    }
 }

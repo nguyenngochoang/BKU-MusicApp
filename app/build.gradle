@@ -17,7 +17,7 @@ android {
         }
     }
     configurations.all {
-        resolutionStrategy.eachDependency {  details ->
+        resolutionStrategy.eachDependency { details ->
             def requested = details.requested
             if (requested.group == "com.android.support") {
                 if (!requested.name.startsWith("multidex")) {
@@ -39,9 +39,13 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'com.google.firebase:firebase-core:16.0.1'
     implementation 'com.google.firebase:firebase-database:16.0.1'
+    implementation 'com.google.firebase:firebase-storage:16.0.1'
+    implementation 'com.google.firebase:firebase-auth:16.0.1'
     implementation files('libs/additionnal.jar')
     implementation files('libs/mail.jar')
     implementation files('libs/activation.jar')
-
+    implementation 'org.jetbrains:annotations-java5:15.0'
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
 }
 apply plugin: 'com.google.gms.google-services'

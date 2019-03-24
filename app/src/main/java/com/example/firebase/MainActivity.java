@@ -1,6 +1,7 @@
 package com.example.firebase;
 
 import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Handler;
 import android.support.annotation.NonNull;
@@ -27,29 +28,57 @@ import java.security.NoSuchAlgorithmException;
 public class MainActivity extends AppCompatActivity {
 
 
-    String nameSaved;
     EditText editText ;
+    Aleart aleart;
 
     public DatabaseReference mDatabase;
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1) {
+            if(resultCode == RESULT_OK) {
+                String text = data.getStringExtra("nameV");
+                if(text!=null){
+                    editText.setText(text);
+                }
+
+            }
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+//        setContentView(R.layout.content_user_information);
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
+
         Intent getIntent = getIntent();
-        nameSaved = getIntent.getStringExtra("nameV");
+//        nameSaved = getIntent.getStringExtra("nameV");
+        onActivityResult(1,RESULT_OK,getIntent);
 
         editText = findViewById(R.id.name);
-        if(nameSaved != null){
-            editText.setText(nameSaved);
-        }
+
+
+
+
+    }
+
+
+
+    @Override
+    public void onBackPressed(){
+        super.onBackPressed();
+        finish();
+
     }
 
     public void onCreateAccount(View view){
         Intent intent = new Intent(this,SignUpActivity.class);
-        startActivity(intent);
+        startActivityForResult(intent,1);
     }
 
     public void goToInfoPage(final User user){
@@ -62,54 +91,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         };
-            handler.postDelayed( my_runnable,1000);
+            handler.postDelayed( my_runnable,2000);
     }
 
-    void showAlert(int typeOfAlert,String message){
-        // 0 : nameExisted
-        // 1 : wrongPass
-        // 2 : name not found
-        // 3 : login successful
 
-
-        if(typeOfAlert == 0){
-            AlertDialog.Builder adb = new AlertDialog.Builder(MainActivity.this);
-
-
-            adb.setMessage(R.string.error);
-            adb.setTitle("Error");
-            AlertDialog ad = adb.create();
-            ad.show();
-        }
-        if(typeOfAlert == 1){
-            AlertDialog.Builder adb = new AlertDialog.Builder(MainActivity.this);
-
-
-            adb.setMessage(R.string.wrongInfo);
-            adb.setTitle("Error");
-            AlertDialog ad = adb.create();
-            ad.show();
-        }
-        if(typeOfAlert == 2){
-            AlertDialog.Builder adb = new AlertDialog.Builder(MainActivity.this);
-
-
-            adb.setMessage(R.string.wrongInfo);
-            adb.setTitle("Error");
-            AlertDialog ad = adb.create();
-            ad.show();
-        }
-        if(typeOfAlert == 3){
-            AlertDialog.Builder adb = new AlertDialog.Builder(MainActivity.this);
-
-
-            adb.setMessage(getResources().getString(R.string.successful)+" "+message);
-            adb.setTitle("Successful");
-            AlertDialog ad = adb.create();
-            ad.show();
-        }
-
-    }
 
     public void onGetData(View view) {
         final EditText name = findViewById(R.id.name);
@@ -119,7 +104,8 @@ public class MainActivity extends AppCompatActivity {
 
         String passV = pass.getText().toString();
         if(nameV.isEmpty() || passV.isEmpty()){
-            showAlert(1," ");
+            aleart = new Aleart(1,getString(R.string.wrongInfo),MainActivity.this,"","");
+
         }
         else{
             try {
@@ -148,28 +134,29 @@ public class MainActivity extends AppCompatActivity {
             }
 
             final String passValue = passV;
-            Log.w("vcl2",passV);
+
 
             mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot){
                     if (dataSnapshot.hasChild(nameV)){
                         User user = dataSnapshot.child(nameV).getValue(User.class);
-                        Log.w("vcl",passValue);
+//                        Log.w("vcl",passValue);
                         if(user.password.equals(passValue)){
-
-                            showAlert(3,user.name);
+                            aleart = new Aleart(2,getString(R.string.successful)+" "+user.name,MainActivity.this,"","");
                             goToInfoPage(user);
 
                         }
                         else{
-                            showAlert(1,passValue);
+                            aleart = new Aleart(1,getString(R.string.wrongInfo),MainActivity.this,"","");
+//
                         }
 
 
                     }
                     else{
-                        showAlert(2," ");
+                        aleart = new Aleart(1," ",MainActivity.this,"","");
+
                     }
 
                 }
@@ -186,6 +173,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void onForgetPassword(View view){
         Intent intent = new Intent(this,ForgetPasswordActivity.class);
-        startActivity(intent);
+        startActivityForResult(intent,1);
     }
+
+
+
 }

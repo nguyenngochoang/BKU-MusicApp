@@ -782,8 +782,10 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable avatar
 drawable avd_hide_password
 drawable avd_show_password
+drawable button
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -811,6 +813,7 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable gradient_b
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable navigation_empty_icon
@@ -826,6 +829,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable ripple_effect
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
@@ -865,6 +869,7 @@ id always
 id app_bar
 id async
 id auto
+id avatar
 id barrier
 id beginning
 id birthday
@@ -875,12 +880,28 @@ id button2
 id button3
 id button4
 id buttonPanel
+id c_birthday
+id c_birthday_field
+id c_cancel
+id c_email
+id c_email_field
+id c_female
+id c_gender
+id c_gender_group
+id c_other
+id c_pass
+id c_pass2
+id c_pass_field
+id c_pass_field_val
+id c_pass_validate
 id cancel
 id cancel_action
 id center
 id center_horizontal
 id center_vertical
 id chains
+id change
+id change_male
 id checkbox
 id chronometer
 id clip_horizontal
@@ -948,6 +969,7 @@ id icon_only
 id ifRoom
 id image
 id info
+id infoTitle
 id invisible
 id italic
 id item_touch_helper_previous_elevation
@@ -957,6 +979,7 @@ id light
 id line1
 id line3
 id linearLayout
+id linearLayout2
 id listMode
 id list_item
 id login_form
@@ -1034,6 +1057,7 @@ id status_bar_latest_event_content
 id submenuarrow
 id submit_area
 id tabMode
+id tableLayout2
 id text
 id text2
 id textSpacerNoButtons
@@ -1059,7 +1083,6 @@ id transition_scene_layoutid_cache
 id transition_transform
 id uniform
 id up
-id updateInfo
 id useLogo
 id username
 id view_offset_helper
@@ -1107,6 +1130,7 @@ layout abc_screen_toolbar
 layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
+layout activity_change_info
 layout activity_createaccount
 layout activity_forget_password
 layout activity_main
@@ -1190,6 +1214,7 @@ string appbar_scrolling_view_behavior
 string blank
 string bottom_sheet_behavior
 string cancel
+string change
 string character_counter_pattern
 string common_google_play_services_enable_button
 string common_google_play_services_enable_text
@@ -1226,6 +1251,7 @@ string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
 string infoNotFound
+string infochanged
 string invalidDate
 string login
 string male
@@ -1235,6 +1261,7 @@ string others
 string pass
 string passwordGenerated
 string password_toggle_content_description
+string passwordmatch
 string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
@@ -1243,6 +1270,7 @@ string project_id
 string prompt_email
 string prompt_password
 string registerOK
+string retypepass
 string role
 string search_menu_title
 string send

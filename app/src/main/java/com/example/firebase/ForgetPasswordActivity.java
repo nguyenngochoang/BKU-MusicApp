@@ -38,7 +38,7 @@ public class ForgetPasswordActivity extends AppCompatActivity  {
     private TextView f_name_err;
     private TextView f_email_err;
     private String newPassWord;
-    private boolean check;
+    private Aleart aleart;
 
     public DatabaseReference mDatabase;
 
@@ -86,45 +86,6 @@ public class ForgetPasswordActivity extends AppCompatActivity  {
         }
     };
 
-    void showAlert(int typeOfAlert){
-        // 0 : nameExisted
-        // 1 : wrongPass
-        // 2 : name not found
-        // 3 : login successfully
-        // 4 : Blank information
-        // 5 : Register successfully
-
-
-
-        if(typeOfAlert == 0){
-            AlertDialog.Builder adb = new AlertDialog.Builder(ForgetPasswordActivity.this);
-
-
-            adb.setMessage(R.string.infoNotFound);
-            adb.setTitle("Error");
-            AlertDialog ad = adb.create();
-            ad.show();
-        }
-        if(typeOfAlert == 1) {
-            AlertDialog.Builder adb = new AlertDialog.Builder(ForgetPasswordActivity.this);
-
-
-            adb.setMessage(R.string.emailNotFound);
-            adb.setTitle("Error");
-            AlertDialog ad = adb.create();
-            ad.show();
-        }
-        if(typeOfAlert == 2) {
-            AlertDialog.Builder adb = new AlertDialog.Builder(ForgetPasswordActivity.this);
-
-
-            adb.setMessage(R.string.passwordGenerated);
-            adb.setTitle("Successful");
-            AlertDialog ad = adb.create();
-            ad.show();
-        }
-
-    }
     public String randomPasswordGenerator(){
         char[] chars1 = "ABCDEF012GHIJKL345MNOPQR678STUVWXYZ9".toCharArray();
         StringBuilder sb1 = new StringBuilder();
@@ -197,14 +158,14 @@ public class ForgetPasswordActivity extends AppCompatActivity  {
                                 sb.append(Integer.toString((bytes[i] & 0xff) + 0x100, 16).substring(1));
                             }
                             //Get complete hashed password in hex format
-                            Log.w("T3",newPassWord);
+//                            Log.w("T3",newPassWord);
                             newPassWord = sb.toString();
                         }catch (Exception e){
                             Log.e("",e.getMessage());
                         }
 
                         mDatabase.child(nameV).child("password").setValue(newPassWord);
-                        onGoback(true);
+                        aleart = new Aleart(2,getString(R.string.passwordGenerated),ForgetPasswordActivity.this,"nameV",nameV);
                     }
                     else{
                         f_email_err.setText(getResources().getString(R.string.emailNotFound));
@@ -237,7 +198,12 @@ public class ForgetPasswordActivity extends AppCompatActivity  {
     }
 
 
-
+    @Override
+    public void onBackPressed(){
+        super.onBackPressed();
+        email.setText("");
+        name.setText("");
+    }
 
 
 

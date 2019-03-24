@@ -32,7 +32,7 @@
     <string name="title_activity_forget_password">Forget Password</string>
     <string name="error_invalid_email">Địa chỉ email không hợp lệ!</string>
     <string name="error_invalid_password">Password cần lớn hơn 4 kí tự</string>
-    <string name="invalidDate">Ngày sinh không hợp lệ. Điền như ví dụ sau : 08/10/1998 </string>
+    <string name="invalidDate">Ngày sinh không hợp lệ </string>
     <string name="send">Send</string>
     <string name="emailNotFound">Email không chính xác </string>
     <string name="infoNotFound"> Không tìm thấy người dùng này.</string>
@@ -40,13 +40,20 @@
     <!-- End of login -->
 
     <!--  String related to userInformation    -->
-    <string name="title_activity_user_information">Thông tin User</string>
+    <string name="title_activity_user_information">Thông tin cá nhân</string>
     <string name="I_userName">Tên người dùng : </string>
     <string name="I_email">Email : </string>
     <string name="role">Loại tài khoản : </string>
     <string name="updateInfo">Chỉnh sửa thông tin</string>
     <string name="action_settings">what</string>
     <!--End of userInformation-->
+
+    <!--String related to change info-->
+    <string name="change">Xác nhận</string>
+    <string name="retypepass">Nhập lại password</string>
+    <string name="passwordmatch">Pasword không khớp!</string>
+    <string name="infochanged">Thay đổi thông tin thành công</string>
+    <!--end of string related to change info-->
 
 </resources>
 

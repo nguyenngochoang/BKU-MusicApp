@@ -85,6 +85,7 @@
                 android:id="@+id/button2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/ripple_effect"
                 android:onClick="onGetData"
                 android:text="@string/login" />
 
@@ -92,6 +93,7 @@
                 android:id="@+id/button3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button"
                 android:onClick="onCreateAccount"
                 android:text="@string/create" />
 
@@ -99,8 +101,10 @@
                 android:id="@+id/button4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button"
                 android:onClick="onForgetPassword"
                 android:text="@string/forget" />
+
         </LinearLayout>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
