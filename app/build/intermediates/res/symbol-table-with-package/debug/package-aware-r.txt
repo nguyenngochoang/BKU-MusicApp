@@ -430,6 +430,7 @@ bool abc_allow_stacked_button_bar
 bool abc_config_actionMenuItemAllCaps
 bool abc_config_closeDialogWhenTouchOutside
 bool abc_config_showMenuShortcutsWhenKeyboardPresent
+color RED
 color abc_background_cache_hint_selector_material_dark
 color abc_background_cache_hint_selector_material_light
 color abc_btn_colored_borderless_text_material
@@ -468,9 +469,9 @@ color bright_foreground_material_dark
 color bright_foreground_material_light
 color button_material_dark
 color button_material_light
-color colorAccent
+color colorBlack
 color colorPrimary
-color colorPrimaryDark
+color colorPrimaryLight
 color common_google_signin_btn_text_dark
 color common_google_signin_btn_text_dark_default
 color common_google_signin_btn_text_dark_disabled
@@ -876,6 +877,7 @@ id birthday
 id birthdayError
 id blocking
 id bottom
+id button
 id button2
 id button3
 id button4
@@ -1013,6 +1015,7 @@ id pin
 id progress_circular
 id progress_horizontal
 id radio
+id rememberBox
 id right
 id right_icon
 id right_side
@@ -1057,7 +1060,9 @@ id status_bar_latest_event_content
 id submenuarrow
 id submit_area
 id tabMode
+id tableLayout
 id tableLayout2
+id tableRow
 id text
 id text2
 id textSpacerNoButtons
@@ -1254,6 +1259,7 @@ string infoNotFound
 string infochanged
 string invalidDate
 string login
+string logout
 string male
 string name
 string ok
@@ -1270,6 +1276,7 @@ string project_id
 string prompt_email
 string prompt_password
 string registerOK
+string rememberMe
 string retypepass
 string role
 string search_menu_title

@@ -47,6 +47,7 @@ public class UserInformation extends AppCompatActivity {
     private String avaUrl;
     private final int PICK_IMAGE_REQUEST = 71;
 
+    public DatabaseReference autoLoginDatabase;
 
     FirebaseStorage storage;
     StorageReference storageReference;
@@ -63,8 +64,9 @@ public class UserInformation extends AppCompatActivity {
 
         storage = FirebaseStorage.getInstance();
         storageReference = storage.getReference();
-        loadReference = storage.getReference().child("avatars/");
+
         mDatabase = FirebaseDatabase.getInstance().getReference();
+        autoLoginDatabase = FirebaseDatabase.getInstance().getReference();
 
         // ---------getting user info from Login page-----------
         Intent intent = getIntent();
@@ -80,7 +82,7 @@ public class UserInformation extends AppCompatActivity {
         });
 
 
-
+        loadReference = storage.getReference().child(user.name+"/"+"avatars/");
 
 
         String hiddenEmail = user.email.substring(0,10)+"..@..";
@@ -103,6 +105,7 @@ public class UserInformation extends AppCompatActivity {
         // -------------------------- getting user's avatar-------------------------
 
         if(!user.avatarUrl.isEmpty()){
+
             avaUrl = user.avatarUrl;
             Glide.with(this)
                     .load(avaUrl)
@@ -136,7 +139,7 @@ public class UserInformation extends AppCompatActivity {
 
 
 
-
+    //----------------------------User's avatar-----------------------------------------------------
     private void chooseImage(){
         Intent intent = new Intent();
         intent.setType("image/*");
@@ -173,7 +176,7 @@ public class UserInformation extends AppCompatActivity {
             progressDialog.setTitle("Uploading...");
             progressDialog.show();
 
-            final StorageReference ref = storageReference.child("avatars/"+ UUID.randomUUID().toString());
+            final StorageReference ref = storageReference.child(user.name +"/"+"avatars/"+ UUID.randomUUID().toString());
 
             ref.putFile(filePath)
                     .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
@@ -184,6 +187,7 @@ public class UserInformation extends AppCompatActivity {
                                 @Override
                                 public void onSuccess(Uri uri) {
                                     mDatabase.child(user.name).child("avatarUrl").setValue(uri.toString());
+                                    mDatabase.child("autoLogin").child("avatarUrl").setValue(uri.toString());
                                 }
                             });
                             Toast.makeText(UserInformation.this, "Uploaded", Toast.LENGTH_SHORT).show();
@@ -211,5 +215,23 @@ public class UserInformation extends AppCompatActivity {
     public void onChangeAvatar(View view){
         chooseImage();
 
+    }
+     //  -----------------end of User's Avatar------------------------------------------------------
+
+    public void onLogOut(View view){
+        autoLoginDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                User user = dataSnapshot.child("autoLogin").getValue(User.class);
+                user.name = "none";
+                autoLoginDatabase.child("autoLogin").setValue(user);
+                finish();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
     }
 }

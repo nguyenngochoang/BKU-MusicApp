@@ -328,6 +328,7 @@ public class SignUpActivity extends AppCompatActivity {
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     if(dataSnapshot.hasChild(nameV)){
                         aleart = new Aleart(1,getString(R.string.error),SignUpActivity.this,"","");
+
                     }
                     else{
                         try{

@@ -2,24 +2,25 @@
 
     <!--String related to main screen -->
     <string name="app_name">fireBase</string>
-    <string name="name">Name</string>
+    <string name="name">Tên</string>
     <string name="pass">Password</string>
-    <string name="login">Login</string>
-    <string name="forget">Forget Password</string>
-    <string name="create">Create Account</string>
+    <string name="login">Đăng nhập</string>
+    <string name="forget">Quên mật khẩu?</string>
+    <string name="create">Tạo tài khoản</string>
     <string name="error">Tên đã có người sử dụng</string>
     <string name="ok">OK</string>
     <string name="wrongInfo">Thông tin đăng nhập không chính xác, vui lòng kiếm tra lại </string>
     <string name="successful">Đăng nhập thành công,xin chào</string>
     <string name="title_activity_sign_up">Sign up</string>
+    <string name="rememberMe">Ghi nhớ đăng nhập</string>
 
     <!--End of main screen -->
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email đã dùng để đăng kí tài khoản</string>
     <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Register</string>
-    <string name="action_sign_in_short">Sign in</string>
+    <string name="action_sign_in">Đăng kí</string>
+    <string name="action_sign_in_short">Đăng kí tài khoản</string>
     <string name="username">Tên đăng nhập</string>
     <string name="date">Ngày tháng năm sinh :</string>
     <string name="male">Nam</string>
@@ -46,6 +47,7 @@
     <string name="role">Loại tài khoản : </string>
     <string name="updateInfo">Chỉnh sửa thông tin</string>
     <string name="action_settings">what</string>
+    <string name="logout">Đăng xuất</string>
     <!--End of userInformation-->
 
     <!--String related to change info-->

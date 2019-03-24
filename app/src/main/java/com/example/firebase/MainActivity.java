@@ -1,10 +1,14 @@
 package com.example.firebase;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Handler;
 import android.support.annotation.NonNull;
+import android.support.v4.widget.CompoundButtonCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,6 +21,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,8 +35,10 @@ public class MainActivity extends AppCompatActivity {
 
     EditText editText ;
     Aleart aleart;
+    CheckBox checkBox;
 
     public DatabaseReference mDatabase;
+    public DatabaseReference autoLoginDatabase;
 
 
     @Override
@@ -53,18 +60,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 //        setContentView(R.layout.content_user_information);
+        checkBox = findViewById(R.id.rememberBox);
         mDatabase = FirebaseDatabase.getInstance().getReference();
-
-
+        autoLoginDatabase = FirebaseDatabase.getInstance().getReference();
+        autoLogin();
         Intent getIntent = getIntent();
-//        nameSaved = getIntent.getStringExtra("nameV");
+
         onActivityResult(1,RESULT_OK,getIntent);
 
         editText = findViewById(R.id.name);
 
-
-
-
+        //------- change checkBox's color when checked -----------------------------
+        int states[][] = {{android.R.attr.state_checked}, {}};
+        int colors[] = {Color.RED, Color.BLACK};
+        CompoundButtonCompat.setButtonTintList(checkBox, new ColorStateList(states, colors));
+        //-------- end of change checkBox's color when checked ----------------------
     }
 
 
@@ -95,6 +105,41 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void saveAutoLogin(final User user){
+
+
+        autoLoginDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                autoLoginDatabase.child("autoLogin").setValue(user);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+    }
+
+    public void autoLogin(){
+        autoLoginDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if(dataSnapshot.hasChild("autoLogin")){
+                    User user = dataSnapshot.child("autoLogin").getValue(User.class);
+                    if(dataSnapshot.hasChild(user.name)){
+                        goToInfoPage(user);
+                    }
+                }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+    }
 
     public void onGetData(View view) {
         final EditText name = findViewById(R.id.name);
@@ -143,6 +188,11 @@ public class MainActivity extends AppCompatActivity {
                         User user = dataSnapshot.child(nameV).getValue(User.class);
 //                        Log.w("vcl",passValue);
                         if(user.password.equals(passValue)){
+                            if(checkBox.isChecked()){
+
+                                saveAutoLogin(user);
+                            }
+
                             aleart = new Aleart(2,getString(R.string.successful)+" "+user.name,MainActivity.this,"","");
                             goToInfoPage(user);
 
@@ -155,7 +205,7 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                     else{
-                        aleart = new Aleart(1," ",MainActivity.this,"","");
+                        aleart = new Aleart(1,getString(R.string.wrongInfo),MainActivity.this,"","");
 
                     }
 
