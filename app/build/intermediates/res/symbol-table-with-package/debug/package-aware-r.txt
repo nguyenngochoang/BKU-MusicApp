@@ -877,7 +877,6 @@ id birthday
 id birthdayError
 id blocking
 id bottom
-id button
 id button2
 id button3
 id button4
@@ -986,6 +985,7 @@ id listMode
 id list_item
 id login_form
 id login_progress
+id logout_button
 id male
 id masked
 id media_actions
@@ -1239,6 +1239,7 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
+string connectionLost
 string create
 string date
 string default_web_client_id
@@ -1282,7 +1283,6 @@ string role
 string search_menu_title
 string send
 string status_bar_notification_info_overflow
-string successful
 string title_activity_forget_password
 string title_activity_sign_up
 string title_activity_user_information

@@ -25,10 +25,7 @@ public class Aleart {
 
     }
 
-    private String returnString(Context c,int id){
-        return c.getResources().getString(id);
 
-    }
 
     private void showAlert(int typeOfAlert, String message, final Activity activity, final String valuename, final String value){
         //1 error

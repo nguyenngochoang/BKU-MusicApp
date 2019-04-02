@@ -321,7 +321,6 @@ public class SignUpActivity extends AppCompatActivity {
             {
                 e.printStackTrace();
             }
-
             //check if username exists or not
             mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
@@ -354,6 +353,9 @@ public class SignUpActivity extends AppCompatActivity {
                     Log.w("Some thing went wrong","Error");
                 }
             });
+
+
+
 
 
 

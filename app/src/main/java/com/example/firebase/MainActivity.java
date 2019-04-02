@@ -1,30 +1,32 @@
 package com.example.firebase;
 
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
+
+import android.content.Context;
+
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v4.widget.CompoundButtonCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+
 import android.view.View;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
+
 import com.google.firebase.database.ValueEventListener;
 
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
+
+
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -37,9 +39,16 @@ public class MainActivity extends AppCompatActivity {
     Aleart aleart;
     CheckBox checkBox;
 
+
     public DatabaseReference mDatabase;
     public DatabaseReference autoLoginDatabase;
 
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
+    public static final String PREF_NAME = "prefs";
+    public static final String KEY_REMEMBER = "remember";
+    public static final String KEY_USERNAME = "username";
+    public static final String KEY_PASS = "password";
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -59,11 +68,20 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        setContentView(R.layout.content_user_information);
+
         checkBox = findViewById(R.id.rememberBox);
         mDatabase = FirebaseDatabase.getInstance().getReference();
+
+        //-------------------------- saved login user -----------------
         autoLoginDatabase = FirebaseDatabase.getInstance().getReference();
-        autoLogin();
+        sharedPreferences = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+        editor = sharedPreferences.edit();
+        String savedUserName =sharedPreferences.getString(KEY_USERNAME,"");
+        String savedPass = sharedPreferences.getString(KEY_PASS,"");
+
+        autoLogin(savedUserName,savedPass);
+        //--------------------------end of saved login user-----------
+
         Intent getIntent = getIntent();
 
         onActivityResult(1,RESULT_OK,getIntent);
@@ -75,6 +93,9 @@ public class MainActivity extends AppCompatActivity {
         int colors[] = {Color.RED, Color.BLACK};
         CompoundButtonCompat.setButtonTintList(checkBox, new ColorStateList(states, colors));
         //-------- end of change checkBox's color when checked ----------------------
+
+
+
     }
 
 
@@ -105,40 +126,48 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void saveAutoLogin(final User user){
+    public void saveAutoLogin(String name,String pass){
+        if(checkBox.isChecked()){
+            editor.putString(KEY_USERNAME, name.trim());
+            editor.putString(KEY_PASS, pass.trim());
+            editor.putBoolean(KEY_REMEMBER, true);
+            editor.apply();
 
+        }
+        else{
+            editor.putBoolean(KEY_REMEMBER, false);
+            editor.remove(KEY_PASS);//editor.putString(KEY_PASS,"");
+            editor.remove(KEY_USERNAME);//editor.putString(KEY_USERNAME, "");
+            editor.apply();
+        }
 
-        autoLoginDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                autoLoginDatabase.child("autoLogin").setValue(user);
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
     }
 
-    public void autoLogin(){
-        autoLoginDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(dataSnapshot.hasChild("autoLogin")){
-                    User user = dataSnapshot.child("autoLogin").getValue(User.class);
-                    if(dataSnapshot.hasChild(user.name)){
-                        goToInfoPage(user);
+    public void autoLogin(final String userName,final String pass){
+        if(sharedPreferences.getBoolean(KEY_REMEMBER,true)){
+            autoLoginDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if(dataSnapshot.hasChild(userName)){
+                        User user = dataSnapshot.child(userName).getValue(User.class);
+
+                        if(user!=null && !pass.isEmpty()){
+                            if(user.password.equals(pass)){
+                                goToInfoPage(user);
+                            }
+                        }
+
                     }
+
                 }
 
-            }
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
+                }
+            });
+        }
 
-            }
-        });
     }
 
     public void onGetData(View view) {
@@ -152,7 +181,7 @@ public class MainActivity extends AppCompatActivity {
             aleart = new Aleart(1,getString(R.string.wrongInfo),MainActivity.this,"","");
 
         }
-        else{
+        else {
             try {
                 // Create MessageDigest instance for MD5
                 MessageDigest md = MessageDigest.getInstance("MD5");
@@ -163,18 +192,13 @@ public class MainActivity extends AppCompatActivity {
                 //This bytes[] has bytes in decimal format;
                 //Convert it to hexadecimal format
                 StringBuilder sb = new StringBuilder();
-                for(int i=0; i< bytes.length ;i++)
-                {
+                for (int i = 0; i < bytes.length; i++) {
                     sb.append(Integer.toString((bytes[i] & 0xff) + 0x100, 16).substring(1));
                 }
                 //Get complete hashed password in hex format
 
                 passV = sb.toString();
-            }
-
-
-            catch (NoSuchAlgorithmException e)
-            {
+            } catch (NoSuchAlgorithmException e) {
                 e.printStackTrace();
             }
 
@@ -183,47 +207,40 @@ public class MainActivity extends AppCompatActivity {
 
             mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
-                public void onDataChange(DataSnapshot dataSnapshot){
-                    if (dataSnapshot.hasChild(nameV)){
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.hasChild(nameV)) {
                         User user = dataSnapshot.child(nameV).getValue(User.class);
-//                        Log.w("vcl",passValue);
-                        if(user.password.equals(passValue)){
-                            if(checkBox.isChecked()){
 
-                                saveAutoLogin(user);
-                            }
-
-                            aleart = new Aleart(2,getString(R.string.successful)+" "+user.name,MainActivity.this,"","");
+                        if (user.password.equals(passValue)) {
+                            saveAutoLogin(nameV, user.password);
                             goToInfoPage(user);
 
-                        }
-                        else{
-                            aleart = new Aleart(1,getString(R.string.wrongInfo),MainActivity.this,"","");
-//
+                        } else {
+                            aleart = new Aleart(1, getString(R.string.wrongInfo), MainActivity.this, "", "");
+                            //
                         }
 
 
-                    }
-                    else{
-                        aleart = new Aleart(1,getString(R.string.wrongInfo),MainActivity.this,"","");
+                    } else {
+                        aleart = new Aleart(1, getString(R.string.wrongInfo), MainActivity.this, "", "");
 
                     }
 
                 }
+
                 @Override
                 public void onCancelled(DatabaseError databaseError) {
                 }
             });
+
         }
-
-
-
 
     }
 
     public void onForgetPassword(View view){
         Intent intent = new Intent(this,ForgetPasswordActivity.class);
         startActivityForResult(intent,1);
+
     }
 
 

@@ -10,10 +10,9 @@
     <string name="error">Tên đã có người sử dụng</string>
     <string name="ok">OK</string>
     <string name="wrongInfo">Thông tin đăng nhập không chính xác, vui lòng kiếm tra lại </string>
-    <string name="successful">Đăng nhập thành công,xin chào</string>
     <string name="title_activity_sign_up">Sign up</string>
     <string name="rememberMe">Ghi nhớ đăng nhập</string>
-
+    <string name="connectionLost">Vui lòng kiểm tra kết nối mạng</string>
     <!--End of main screen -->
 
     <!-- Strings related to login -->
@@ -55,6 +54,12 @@
     <string name="retypepass">Nhập lại password</string>
     <string name="passwordmatch">Pasword không khớp!</string>
     <string name="infochanged">Thay đổi thông tin thành công</string>
+    <string name="title_activity_main_menu">MainMenu</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
     <!--end of string related to change info-->
 
 </resources>

@@ -1,7 +1,9 @@
 package com.example.firebase;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
@@ -34,6 +36,11 @@ import java.io.File;
 import java.io.IOException;
 import java.util.UUID;
 
+import static com.example.firebase.MainActivity.KEY_PASS;
+import static com.example.firebase.MainActivity.KEY_REMEMBER;
+import static com.example.firebase.MainActivity.KEY_USERNAME;
+import static com.example.firebase.MainActivity.PREF_NAME;
+
 public class UserInformation extends AppCompatActivity {
 
     User user;
@@ -46,6 +53,8 @@ public class UserInformation extends AppCompatActivity {
     public Uri filePath;
     private String avaUrl;
     private final int PICK_IMAGE_REQUEST = 71;
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
 
     public DatabaseReference autoLoginDatabase;
 
@@ -67,6 +76,8 @@ public class UserInformation extends AppCompatActivity {
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
         autoLoginDatabase = FirebaseDatabase.getInstance().getReference();
+        sharedPreferences = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+        editor = sharedPreferences.edit();
 
         // ---------getting user info from Login page-----------
         Intent intent = getIntent();
@@ -124,6 +135,7 @@ public class UserInformation extends AppCompatActivity {
         super.onBackPressed();
         Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent);
+        onLogOut(findViewById(R.id.logout_button));
         finish();
     }
 
@@ -219,19 +231,12 @@ public class UserInformation extends AppCompatActivity {
      //  -----------------end of User's Avatar------------------------------------------------------
 
     public void onLogOut(View view){
-        autoLoginDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                User user = dataSnapshot.child("autoLogin").getValue(User.class);
-                user.name = "none";
-                autoLoginDatabase.child("autoLogin").setValue(user);
-                finish();
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
+        editor.putBoolean(KEY_REMEMBER, false);
+        editor.remove(KEY_PASS);//editor.putString(KEY_PASS,"");
+        editor.remove(KEY_USERNAME);//editor.putString(KEY_USERNAME, "");
+        editor.apply();
+        finish();
     }
+
+
 }

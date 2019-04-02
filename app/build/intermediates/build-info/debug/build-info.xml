@@ -2,85 +2,85 @@
 <instant-run
     abi="x86"
     api-level="24"
-    build-mode="HOT_WARM"
+    build-mode="FULL"
     density="xhdpi"
     format="10"
     plugin-version="3.3.2"
-    timestamp="1553445001571"
+    timestamp="1554043199425"
     token="1536965295938027233"
-    verifier="COMPATIBLE" >
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="580" />
+        duration="4633" />
     <task
         name="instant-run-dex"
-        duration="63" />
+        duration="0" />
     <task
         name="instant-run-transform"
-        duration="137" />
+        duration="374" />
     <task
         name="verifier"
-        duration="6" />
+        duration="271" />
 
     <artifact
-        location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/reload-dex/debug/classes.dex"
-        type="RELOAD_DEX" />
+        location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1553443886059"
+        timestamp="1554043199425"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
         <artifact
             location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
-            type="SPLIT_MAIN" />
-        <artifact
-            location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
             type="SPLIT" />
         <artifact
             location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
         <artifact
-            location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
-            type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        ir-eligibility="R_CLASS_CHANGE"
-        timestamp="1553444456720"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
             location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
@@ -89,28 +89,17 @@
             location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
             type="SPLIT" />
         <artifact
+            location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            type="SPLIT" />
+        <artifact
             location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        ir-eligibility="COMPATIBLE"
-        timestamp="1553444951514"
-        verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
         <artifact
             location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
             type="SPLIT_MAIN" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1553445001571"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/reload-dex/debug/classes.dex"
-            type="RELOAD_DEX" />
     </build>
 
 </instant-run>

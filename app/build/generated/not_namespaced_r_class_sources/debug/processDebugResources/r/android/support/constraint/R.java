@@ -74,10 +74,10 @@ public final class R {
         private id() {}
 
         public static final int bottom = 0x7f08002b;
-        public static final int end = 0x7f080061;
-        public static final int gone = 0x7f080076;
-        public static final int invisible = 0x7f08008b;
-        public static final int left = 0x7f08008f;
+        public static final int end = 0x7f080060;
+        public static final int gone = 0x7f080075;
+        public static final int invisible = 0x7f08008a;
+        public static final int left = 0x7f08008e;
         public static final int packed = 0x7f0800aa;
         public static final int parent = 0x7f0800ac;
         public static final int percent = 0x7f0800b1;
