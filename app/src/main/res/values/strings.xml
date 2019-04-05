@@ -62,5 +62,12 @@
     <string name="nav_header_desc">Navigation header</string>
     <!--end of string related to change info-->
 
+    <!--String used to set boom-menu-->
+    <string name="userInfo">Thông tin cá nhân</string>
+    <string name="showAlbum">Album</string>
+    <string name="chat">Chat</string>
+    <string name="feedback">Góp ý</string>
+    <!--end of boom-menu's String-->
+
 </resources>
 

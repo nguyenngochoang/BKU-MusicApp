@@ -56,7 +56,6 @@ public class UserInformation extends AppCompatActivity {
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
 
-    public DatabaseReference autoLoginDatabase;
 
     FirebaseStorage storage;
     StorageReference storageReference;
@@ -71,17 +70,19 @@ public class UserInformation extends AppCompatActivity {
         setContentView(R.layout.activity_user_information);
 
 
+
         storage = FirebaseStorage.getInstance();
         storageReference = storage.getReference();
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
-        autoLoginDatabase = FirebaseDatabase.getInstance().getReference();
         sharedPreferences = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
         editor = sharedPreferences.edit();
 
         // ---------getting user info from Login page-----------
         Intent intent = getIntent();
         user = (User) intent.getSerializableExtra("userInfo") ;
+
+
         //----------end of getting user info from Login page------
 
         FloatingActionButton fab =  findViewById(R.id.fab);
@@ -126,17 +127,28 @@ public class UserInformation extends AppCompatActivity {
 
         // ---------------------------- end of getting user's avatar ----------------
 
+        //slide effect between activites
+        overridePendingTransition(R.xml.slide_in, R.xml.slide_out);
     }
 
-
+    protected void onLeaveThisActivity() {
+        //slide effect
+        overridePendingTransition(R.xml.enter_from_left, R.xml.exit_to_right);
+    }
 
     @Override
     public void onBackPressed(){
         super.onBackPressed();
-        Intent intent = new Intent(this,MainActivity.class);
+        Intent intent = new Intent(this,MainMenu.class);
+        intent.putExtra("userInfo",user);
         startActivity(intent);
-        onLogOut(findViewById(R.id.logout_button));
         finish();
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+        onLeaveThisActivity();
     }
 
     public void ChangeData(){

@@ -10,10 +10,12 @@ import android.graphics.Color;
 
 import android.os.Handler;
 import android.support.annotation.NonNull;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.CompoundButtonCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import android.util.Log;
 import android.view.View;
 
 import com.google.firebase.database.DataSnapshot;
@@ -68,8 +70,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        checkBox = findViewById(R.id.rememberBox);
+//            setContentView(R.layout.activity_main_menu);
+        checkBox =  findViewById(R.id.rememberBox);
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
         //-------------------------- saved login user -----------------
@@ -91,8 +93,10 @@ public class MainActivity extends AppCompatActivity {
         //------- change checkBox's color when checked -----------------------------
         int states[][] = {{android.R.attr.state_checked}, {}};
         int colors[] = {Color.RED, Color.BLACK};
+
         CompoundButtonCompat.setButtonTintList(checkBox, new ColorStateList(states, colors));
         //-------- end of change checkBox's color when checked ----------------------
+
 
 
 
@@ -112,17 +116,12 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(intent,1);
     }
 
-    public void goToInfoPage(final User user){
-        final Intent intent = new Intent(this, UserInformation.class);
-        Handler handler = new Handler();
-        Runnable my_runnable = new Runnable() {
-            @Override
-            public void run() {
-                intent.putExtra("userInfo",user);
-                startActivity(intent);
-            }
-        };
-            handler.postDelayed( my_runnable,2000);
+
+
+    public void goToMainMenu(final User user){
+        final Intent intent = new Intent(this, MainMenu.class);
+        intent.putExtra("userInfo",user);
+        startActivity(intent);
     }
 
 
@@ -153,7 +152,8 @@ public class MainActivity extends AppCompatActivity {
 
                         if(user!=null && !pass.isEmpty()){
                             if(user.password.equals(pass)){
-                                goToInfoPage(user);
+//                                goToInfoPage(user);
+                                  goToMainMenu(user);
                             }
                         }
 
@@ -213,7 +213,8 @@ public class MainActivity extends AppCompatActivity {
 
                         if (user.password.equals(passValue)) {
                             saveAutoLogin(nameV, user.password);
-                            goToInfoPage(user);
+//                            goToInfoPage(user);
+                            goToMainMenu(user);
 
                         } else {
                             aleart = new Aleart(1, getString(R.string.wrongInfo), MainActivity.this, "", "");
