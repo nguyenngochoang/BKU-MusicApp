@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:2:1-40:12
-INJECTED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:2:1-40:12
-INJECTED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:2:1-40:12
-INJECTED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:2:1-40:12
+ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:2:1-41:12
+INJECTED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:2:1-41:12
+INJECTED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:2:1-41:12
+INJECTED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:2:1-41:12
 MERGED from [com.android.support:design:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/52a027046812c6e98c56d6261d10daa9/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:appcompat-v7:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/390db203945ef54d0c5d3b6aaafeed7d/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/hoang/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/7ec2a5ceb8d7a0c0f0223848cb60c522/AndroidManifest.xml:2:1-11:12
@@ -14,10 +14,7 @@ MERGED from [com.google.firebase:firebase-auth:16.0.1] /home/hoang/.gradle/cache
 MERGED from [com.github.bumptech.glide:glide:4.7.1] /home/hoang/.gradle/caches/transforms-1/files-1.1/glide-4.7.1.aar/4d59c54dc0f760d3a91c7ddfd1f5342e/AndroidManifest.xml:2:1-13:12
 MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/b06cfb77347a713235e72a2c742936e1/AndroidManifest.xml:17:1-28:12
 MERGED from [com.nightonke:boommenu:2.1.1] /home/hoang/.gradle/caches/transforms-1/files-1.1/boommenu-2.1.1.aar/6b51c4e7a0b4b262fb12784075d34376/AndroidManifest.xml:2:1-16:12
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/9599256ed1315c39224e24ee4f14e91e/AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/ec76de878b1575819f144c90641d74e9/AndroidManifest.xml:17:1-28:12
 MERGED from [com.android.support:transition:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/0dcc73f96b79cbe350118fa2761b8ee4/AndroidManifest.xml:17:1-28:12
-MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /home/hoang/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.7.1.aar/d65e7cd7cde5eecfdfa5176ae185ec38/AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /home/hoang/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/57b63c58bdb0636fde351d8adc925e7f/AndroidManifest.xml:17:1-34:12
 MERGED from [com.google.firebase:firebase-analytics:16.0.1] /home/hoang/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/0adb719cae4a3fa51e72eaa5105c9dd9/AndroidManifest.xml:17:1-55:12
 MERGED from [com.google.firebase:firebase-database-connection:16.0.1] /home/hoang/.gradle/caches/transforms-1/files-1.1/firebase-database-connection-16.0.1.aar/b268d2533516d5486da807e740381a09/AndroidManifest.xml:2:1-10:12
@@ -36,6 +33,9 @@ MERGED from [com.google.firebase:firebase-measurement-connector:16.0.0] /home/ho
 MERGED from [com.google.android.gms:play-services-ads-identifier:15.0.1] /home/hoang/.gradle/caches/transforms-1/files-1.1/play-services-ads-identifier-15.0.1.aar/4f6ed618ec0d11eb05fcf8a017de08b6/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-basement:15.0.1] /home/hoang/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/ede444560daa7bcf12ea31a0c59af3f8/AndroidManifest.xml:17:1-28:12
 MERGED from [com.android.support:support-v4:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/b55fbebbcb110dc93a5f9618356e5e71/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/9599256ed1315c39224e24ee4f14e91e/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/ec76de878b1575819f144c90641d74e9/AndroidManifest.xml:17:1-28:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /home/hoang/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.7.1.aar/d65e7cd7cde5eecfdfa5176ae185ec38/AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:support-fragment:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/2b33753a9473e5acae4650ff62f3e161/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-core-ui:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/439f4eaed55748c3d8a4134d7f2edb14/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-media-compat:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/b417ea4fd100810b60dd04dbc32eedb0/AndroidManifest.xml:17:1-31:12
@@ -43,20 +43,20 @@ MERGED from [com.android.support:support-core-utils:26.1.0] /home/hoang/.gradle/
 MERGED from [com.android.support:support-compat:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/c316270ed2f53496e3b8a7f1cbf8b89b/AndroidManifest.xml:17:1-31:12
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.0.aar/aac3dbb9e3ef21d26bd393080d81a5d7/AndroidManifest.xml:17:1-24:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/5193a2ac20995d0579bc1063f0cf9f83/AndroidManifest.xml:17:1-30:12
-INJECTED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:2:1-40:12
-INJECTED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:2:1-40:12
-INJECTED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:2:1-40:12
+INJECTED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:2:1-41:12
+INJECTED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:2:1-41:12
+INJECTED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:2:1-41:12
 	package
 		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:3:5-35
 		INJECTED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml
 		INJECTED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml
-		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:2:1-40:12
+		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:2:1-41:12
 		INJECTED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml
-		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:2:1-40:12
+		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:2:1-41:12
 		INJECTED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:2:11-69
@@ -107,7 +107,7 @@ ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManife
 	android:name
 		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:10:22-77
 application
-ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:12:5-38:19
+ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:12:5-39:19
 MERGED from [com.android.support:design:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/52a027046812c6e98c56d6261d10daa9/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:design:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/52a027046812c6e98c56d6261d10daa9/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:appcompat-v7:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/390db203945ef54d0c5d3b6aaafeed7d/AndroidManifest.xml:25:5-29:19
@@ -124,14 +124,8 @@ MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/hoang/.gradle/cac
 MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/b06cfb77347a713235e72a2c742936e1/AndroidManifest.xml:22:5-26:19
 MERGED from [com.nightonke:boommenu:2.1.1] /home/hoang/.gradle/caches/transforms-1/files-1.1/boommenu-2.1.1.aar/6b51c4e7a0b4b262fb12784075d34376/AndroidManifest.xml:11:5-14:19
 MERGED from [com.nightonke:boommenu:2.1.1] /home/hoang/.gradle/caches/transforms-1/files-1.1/boommenu-2.1.1.aar/6b51c4e7a0b4b262fb12784075d34376/AndroidManifest.xml:11:5-14:19
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/9599256ed1315c39224e24ee4f14e91e/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/9599256ed1315c39224e24ee4f14e91e/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/ec76de878b1575819f144c90641d74e9/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/ec76de878b1575819f144c90641d74e9/AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:transition:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/0dcc73f96b79cbe350118fa2761b8ee4/AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:transition:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/0dcc73f96b79cbe350118fa2761b8ee4/AndroidManifest.xml:22:5-26:19
-MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /home/hoang/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.7.1.aar/d65e7cd7cde5eecfdfa5176ae185ec38/AndroidManifest.xml:9:5-20
-MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /home/hoang/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.7.1.aar/d65e7cd7cde5eecfdfa5176ae185ec38/AndroidManifest.xml:9:5-20
 MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /home/hoang/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/57b63c58bdb0636fde351d8adc925e7f/AndroidManifest.xml:26:5-32:19
 MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /home/hoang/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/57b63c58bdb0636fde351d8adc925e7f/AndroidManifest.xml:26:5-32:19
 MERGED from [com.google.firebase:firebase-analytics:16.0.1] /home/hoang/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/0adb719cae4a3fa51e72eaa5105c9dd9/AndroidManifest.xml:28:5-53:19
@@ -160,6 +154,12 @@ MERGED from [com.google.android.gms:play-services-basement:15.0.1] /home/hoang/.
 MERGED from [com.google.android.gms:play-services-basement:15.0.1] /home/hoang/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/ede444560daa7bcf12ea31a0c59af3f8/AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:support-v4:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/b55fbebbcb110dc93a5f9618356e5e71/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:support-v4:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/b55fbebbcb110dc93a5f9618356e5e71/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/9599256ed1315c39224e24ee4f14e91e/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/9599256ed1315c39224e24ee4f14e91e/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/ec76de878b1575819f144c90641d74e9/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/ec76de878b1575819f144c90641d74e9/AndroidManifest.xml:22:5-26:19
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /home/hoang/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.7.1.aar/d65e7cd7cde5eecfdfa5176ae185ec38/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /home/hoang/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.7.1.aar/d65e7cd7cde5eecfdfa5176ae185ec38/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:support-fragment:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/2b33753a9473e5acae4650ff62f3e161/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:support-fragment:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/2b33753a9473e5acae4650ff62f3e161/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:support-core-ui:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/439f4eaed55748c3d8a4134d7f2edb14/AndroidManifest.xml:25:5-29:19
@@ -186,48 +186,52 @@ MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/hoang/.gradle/caches/tr
 		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:13:9-35
 	android:theme
 		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:18:9-40
+activity#com.example.firebase.AdminActivity
+ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:19:9-60
+	android:name
+		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:19:19-48
 activity#com.example.firebase.MainMenu
-ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:19:9-55
+ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:20:9-46
 	android:name
-		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:19:19-43
+		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:20:19-43
 activity#com.example.firebase.ChangeInfoActivity
-ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:20:9-56
+ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:21:9-56
 	android:name
-		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:20:19-53
+		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:21:19-53
 activity#com.example.firebase.UserInformation
-ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:21:9-24:59
+ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:22:9-25:59
 	android:label
-		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:23:13-68
+		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:24:13-68
 	android:theme
-		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:24:13-56
+		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:25:13-56
 	android:name
-		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:22:13-44
+		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:23:13-44
 activity#com.example.firebase.ForgetPasswordActivity
-ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:25:9-27:70
+ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:26:9-28:70
 	android:label
-		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:27:13-67
+		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:28:13-67
 	android:name
-		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:26:13-51
+		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:27:13-51
 activity#com.example.firebase.SignUpActivity
-ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:28:9-30:62
+ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:29:9-31:62
 	android:label
-		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:30:13-59
+		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:31:13-59
 	android:name
-		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:29:13-43
+		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:30:13-43
 activity#com.example.firebase.MainActivity
-ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:31:9-37:20
+ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:32:9-38:20
 	android:name
-		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:31:19-47
+		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:32:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:32:13-36:29
+ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:33:13-37:29
 action#android.intent.action.MAIN
-ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:33:17-69
+ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:34:17-69
 	android:name
-		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:33:25-66
+		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:34:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:35:17-77
+ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:36:17-77
 	android:name
-		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:35:27-74
+		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:36:27-74
 uses-sdk
 INJECTED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml
@@ -252,14 +256,8 @@ MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/hoang/.gradle/cac
 MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/b06cfb77347a713235e72a2c742936e1/AndroidManifest.xml:20:5-44
 MERGED from [com.nightonke:boommenu:2.1.1] /home/hoang/.gradle/caches/transforms-1/files-1.1/boommenu-2.1.1.aar/6b51c4e7a0b4b262fb12784075d34376/AndroidManifest.xml:7:5-9:41
 MERGED from [com.nightonke:boommenu:2.1.1] /home/hoang/.gradle/caches/transforms-1/files-1.1/boommenu-2.1.1.aar/6b51c4e7a0b4b262fb12784075d34376/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/9599256ed1315c39224e24ee4f14e91e/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/9599256ed1315c39224e24ee4f14e91e/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/ec76de878b1575819f144c90641d74e9/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/ec76de878b1575819f144c90641d74e9/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:transition:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/0dcc73f96b79cbe350118fa2761b8ee4/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:transition:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/0dcc73f96b79cbe350118fa2761b8ee4/AndroidManifest.xml:20:5-44
-MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /home/hoang/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.7.1.aar/d65e7cd7cde5eecfdfa5176ae185ec38/AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /home/hoang/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.7.1.aar/d65e7cd7cde5eecfdfa5176ae185ec38/AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /home/hoang/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/57b63c58bdb0636fde351d8adc925e7f/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-measurement-connector-impl:16.0.1] /home/hoang/.gradle/caches/transforms-1/files-1.1/firebase-measurement-connector-impl-16.0.1.aar/57b63c58bdb0636fde351d8adc925e7f/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-analytics:16.0.1] /home/hoang/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.0.1.aar/0adb719cae4a3fa51e72eaa5105c9dd9/AndroidManifest.xml:20:5-44
@@ -296,6 +294,12 @@ MERGED from [com.google.android.gms:play-services-basement:15.0.1] /home/hoang/.
 MERGED from [com.google.android.gms:play-services-basement:15.0.1] /home/hoang/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/ede444560daa7bcf12ea31a0c59af3f8/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-v4:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/b55fbebbcb110dc93a5f9618356e5e71/AndroidManifest.xml:21:5-23:54
 MERGED from [com.android.support:support-v4:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/b55fbebbcb110dc93a5f9618356e5e71/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/9599256ed1315c39224e24ee4f14e91e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/9599256ed1315c39224e24ee4f14e91e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/ec76de878b1575819f144c90641d74e9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/ec76de878b1575819f144c90641d74e9/AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /home/hoang/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.7.1.aar/d65e7cd7cde5eecfdfa5176ae185ec38/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /home/hoang/.gradle/caches/transforms-1/files-1.1/gifdecoder-4.7.1.aar/d65e7cd7cde5eecfdfa5176ae185ec38/AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.support:support-fragment:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/2b33753a9473e5acae4650ff62f3e161/AndroidManifest.xml:21:5-23:60
 MERGED from [com.android.support:support-fragment:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/2b33753a9473e5acae4650ff62f3e161/AndroidManifest.xml:21:5-23:60
 MERGED from [com.android.support:support-core-ui:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/439f4eaed55748c3d8a4134d7f2edb14/AndroidManifest.xml:21:5-23:58
@@ -328,14 +332,14 @@ MERGED from [com.android.support:appcompat-v7:26.1.0] /home/hoang/.gradle/caches
 MERGED from [com.android.support:appcompat-v7:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/390db203945ef54d0c5d3b6aaafeed7d/AndroidManifest.xml:26:9-28:38
 MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/b06cfb77347a713235e72a2c742936e1/AndroidManifest.xml:23:9-25:38
 MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/b06cfb77347a713235e72a2c742936e1/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/9599256ed1315c39224e24ee4f14e91e/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/9599256ed1315c39224e24ee4f14e91e/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/ec76de878b1575819f144c90641d74e9/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/ec76de878b1575819f144c90641d74e9/AndroidManifest.xml:23:9-25:38
 MERGED from [com.android.support:transition:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/0dcc73f96b79cbe350118fa2761b8ee4/AndroidManifest.xml:23:9-25:38
 MERGED from [com.android.support:transition:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/0dcc73f96b79cbe350118fa2761b8ee4/AndroidManifest.xml:23:9-25:38
 MERGED from [com.android.support:support-v4:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/b55fbebbcb110dc93a5f9618356e5e71/AndroidManifest.xml:26:9-28:38
 MERGED from [com.android.support:support-v4:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/b55fbebbcb110dc93a5f9618356e5e71/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/9599256ed1315c39224e24ee4f14e91e/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/9599256ed1315c39224e24ee4f14e91e/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/ec76de878b1575819f144c90641d74e9/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/ec76de878b1575819f144c90641d74e9/AndroidManifest.xml:23:9-25:38
 MERGED from [com.android.support:support-fragment:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/2b33753a9473e5acae4650ff62f3e161/AndroidManifest.xml:26:9-28:38
 MERGED from [com.android.support:support-fragment:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/2b33753a9473e5acae4650ff62f3e161/AndroidManifest.xml:26:9-28:38
 MERGED from [com.android.support:support-core-ui:26.1.0] /home/hoang/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/439f4eaed55748c3d8a4134d7f2edb14/AndroidManifest.xml:26:9-28:38

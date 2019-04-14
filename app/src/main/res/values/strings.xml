@@ -67,6 +67,7 @@
     <string name="showAlbum">Album</string>
     <string name="chat">Chat</string>
     <string name="feedback">Góp ý</string>
+    <string name="admin">Quản lí người dùng</string>
     <!--end of boom-menu's String-->
 
 </resources>
