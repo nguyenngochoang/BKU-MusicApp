@@ -148,7 +148,7 @@ public class AdminActivity extends AppCompatActivity {
                         case 6:
                             Button btn=new Button(this);
                             btn.setId(1);
-                            btn.setText("Delete");
+                            btn.setText("Ban");
                             btn.setLayoutParams(new TableLayout.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,TableRow.LayoutParams.WRAP_CONTENT));
                             tableRow.addView(btn, tableRowParams);
                             break;

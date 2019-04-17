@@ -2,34 +2,67 @@
 <instant-run
     abi="x86"
     api-level="24"
-    build-mode="HOT_WARM"
+    build-mode="FULL"
     density="xhdpi"
     format="10"
     plugin-version="3.3.2"
-    timestamp="1555217812013"
+    timestamp="1555470748143"
     token="1536965295938027233"
-    verifier="COMPATIBLE" >
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="394" />
+        duration="3950" />
     <task
         name="instant-run-dex"
-        duration="9" />
+        duration="0" />
     <task
         name="instant-run-transform"
-        duration="12" />
+        duration="283" />
     <task
         name="verifier"
-        duration="1" />
+        duration="199" />
 
     <artifact
-        location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/reload-dex/debug/classes.dex"
-        type="RELOAD_DEX" />
+        location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1555211855311"
+        timestamp="1555470748143"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
@@ -67,110 +100,6 @@
         <artifact
             location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
             type="SPLIT_MAIN" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1555216815078"
-        verifier="METHOD_DELETED" >
-        <artifact
-            location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
-            type="SPLIT" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1555217193898"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/builds/debug/1555217193898/classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1555217258088"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/builds/debug/1555217258088/classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1555217271799"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/builds/debug/1555217271799/classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1555217456752"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/builds/debug/1555217456752/classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1555217480629"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/builds/debug/1555217480629/classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1555217497832"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/builds/debug/1555217497832/classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1555217564295"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/builds/debug/1555217564295/classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1555217598761"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/builds/debug/1555217598761/classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1555217670389"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/builds/debug/1555217670389/classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1555217720184"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/builds/debug/1555217720184/classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1555217786784"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/builds/debug/1555217786784/classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1555217812013"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/reload-dex/debug/classes.dex"
-            type="RELOAD_DEX" />
     </build>
 
 </instant-run>
