@@ -6,18 +6,18 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 
-public class Aleart {
+public class Alert {
     private int type;
     private String message;
 
 
-    public  Aleart (){
+    public Alert(){
         // do nothing, apply for go back button
     }
 
 
 
-    public Aleart(int type, String message, Activity activity, String valuename, String value){
+    public Alert(int type, String message, Activity activity, String valuename, String value){
 
         this.type = type;
         this.message = message;

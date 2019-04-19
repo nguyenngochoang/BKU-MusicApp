@@ -905,6 +905,7 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable admin
 drawable album
 drawable avatar
 drawable avd_hide_password
@@ -937,6 +938,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable edit
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable gradient_b
@@ -1436,6 +1438,7 @@ layout abc_screen_toolbar
 layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
+layout activity_admin
 layout activity_change_info
 layout activity_createaccount
 layout activity_forget_password
@@ -1521,6 +1524,7 @@ string abc_toolbar_collapse_description
 string action_settings
 string action_sign_in
 string action_sign_in_short
+string admin
 string app_name
 string appbar_scrolling_view_behavior
 string blank

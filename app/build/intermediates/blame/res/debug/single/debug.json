@@ -248,6 +248,10 @@
         "source": "/home/hoang/AndroidStudioProjects/fireBase/app/src/main/res/drawable-v21/user.png"
     },
     {
+        "merged": "/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/res/merged/debug/drawable-v21_admin.png.flat",
+        "source": "/home/hoang/AndroidStudioProjects/fireBase/app/src/main/res/drawable-v21/admin.png"
+    },
+    {
         "merged": "/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
         "source": "/home/hoang/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/390db203945ef54d0c5d3b6aaafeed7d/res/drawable-xhdpi-v4/abc_textfield_default_mtrl_alpha.9.png"
     },
@@ -958,6 +962,10 @@
     {
         "merged": "/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
         "source": "/home/hoang/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/390db203945ef54d0c5d3b6aaafeed7d/res/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/res/merged/debug/drawable-v21_edit.png.flat",
+        "source": "/home/hoang/AndroidStudioProjects/fireBase/app/src/main/res/drawable-v21/edit.png"
     },
     {
         "merged": "/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/res/merged/debug/drawable_design_fab_background.xml.flat",
@@ -1894,6 +1902,10 @@
     {
         "merged": "/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_low_pressed.9.png.flat",
         "source": "/home/hoang/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/c316270ed2f53496e3b8a7f1cbf8b89b/res/drawable-hdpi-v4/notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/res/merged/debug/layout_activity_admin.xml.flat",
+        "source": "/home/hoang/AndroidStudioProjects/fireBase/app/src/main/res/layout/activity_admin.xml"
     },
     {
         "merged": "/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/res/merged/debug/layout_notification_template_big_media_narrow.xml.flat",

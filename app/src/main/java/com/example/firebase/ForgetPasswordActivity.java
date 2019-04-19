@@ -1,6 +1,5 @@
 package com.example.firebase;
 
-import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -38,7 +37,7 @@ public class ForgetPasswordActivity extends AppCompatActivity  {
     private TextView f_name_err;
     private TextView f_email_err;
     private String newPassWord;
-    private Aleart aleart;
+    private Alert alert;
 
     public DatabaseReference mDatabase;
 
@@ -165,7 +164,7 @@ public class ForgetPasswordActivity extends AppCompatActivity  {
                         }
 
                         mDatabase.child(nameV).child("password").setValue(newPassWord);
-                        aleart = new Aleart(2,getString(R.string.passwordGenerated),ForgetPasswordActivity.this,"nameV",nameV);
+                        alert = new Alert(2,getString(R.string.passwordGenerated),ForgetPasswordActivity.this,"nameV",nameV);
                     }
                     else{
                         f_email_err.setText(getResources().getString(R.string.emailNotFound));

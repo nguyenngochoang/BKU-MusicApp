@@ -32,6 +32,9 @@ public class LongOperation extends AsyncTask<Void, Void, String>  {
     private String body;
     private String reciever;
     private  String subject;
+    private  String sender;
+
+
     public LongOperation (String reciever,String body){
         this.body = body;
         this.reciever = reciever;
