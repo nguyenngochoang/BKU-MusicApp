@@ -4,7 +4,17 @@
             "outputFile": "/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "/home/hoang/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/52a027046812c6e98c56d6261d10daa9/res/values-land/values-land.xml",
+                    "source": "/home/hoang/.gradle/caches/transforms-2/files-2.1/6df6ef2e79b352fac9c076755b9cd616/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,125,189,260",
+                        "endColumns": "69,63,70,67",
+                        "endOffsets": "120,184,255,323"
+                    }
+                },
+                {
+                    "source": "/home/hoang/.gradle/caches/transforms-2/files-2.1/42485c5008c1d052872bef340746e5bb/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -20,16 +30,6 @@
                         "endLines": "9",
                         "endColumns": "12",
                         "endOffsets": "505"
-                    }
-                },
-                {
-                    "source": "/home/hoang/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/390db203945ef54d0c5d3b6aaafeed7d/res/values-land/values-land.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,125,189,260",
-                        "endColumns": "69,63,70,67",
-                        "endOffsets": "120,184,255,323"
                     }
                 }
             ]

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="default_web_client_id" translatable="false">1085180803735-ipo86ha438n6lvt47dl4hgj00fhlc0ug.apps.googleusercontent.com</string>
-    <string name="firebase_database_url" translatable="false">https://testing-fd268.firebaseio.com</string>
-    <string name="gcm_defaultSenderId" translatable="false">1085180803735</string>
-    <string name="google_api_key" translatable="false">AIzaSyBUc1oQ_OhqACx8taRpjlj1q8EP25LK--A</string>
-    <string name="google_app_id" translatable="false">1:1085180803735:android:1b7829f2ac180d28</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBUc1oQ_OhqACx8taRpjlj1q8EP25LK--A</string>
-    <string name="google_storage_bucket" translatable="false">testing-fd268.appspot.com</string>
-    <string name="project_id" translatable="false">testing-fd268</string>
+    <string name="default_web_client_id" translatable="false">754586336162-too4h80h1prclv9h2d5guhj1igmg9c1r.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://bkmusic-1f502.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">754586336162</string>
+    <string name="google_api_key" translatable="false">AIzaSyCa2FeAg01vRG6knlwdPbm1Y44zKi9tJfw</string>
+    <string name="google_app_id" translatable="false">1:754586336162:android:1b7829f2ac180d28</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCa2FeAg01vRG6knlwdPbm1Y44zKi9tJfw</string>
+    <string name="google_storage_bucket" translatable="false">bkmusic-1f502.appspot.com</string>
+    <string name="project_id" translatable="false">bkmusic-1f502</string>
 </resources>

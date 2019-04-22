@@ -1,6 +1,8 @@
 package com.example.firebase;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Handler;
@@ -29,19 +31,27 @@ import com.pankaj.mail_in_background.LongOperation;
 
 import java.util.ArrayList;
 
+import static com.example.firebase.MainActivity.KEY_PASS;
+import static com.example.firebase.MainActivity.KEY_REMEMBER;
+import static com.example.firebase.MainActivity.KEY_USERNAME;
+import static com.example.firebase.MainActivity.PREF_NAME;
+
 public class MainMenu extends AppCompatActivity {
 
     User user;
     long rowCount = 0;
     public DatabaseReference mDatabase;
     ArrayList<User> row;
+    SharedPreferences.Editor editor;
+    SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
         mDatabase = FirebaseDatabase.getInstance().getReference();
-
+        sharedPreferences = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+        editor = sharedPreferences.edit();
 
         //---------------- getting userInfo --------------
         Intent intent = getIntent();
@@ -174,4 +184,16 @@ public class MainMenu extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public void onBackPressed(){
+        super.onBackPressed();
+        editor.putBoolean(KEY_REMEMBER, false);
+        editor.remove(KEY_PASS);//editor.putString(KEY_PASS,"");
+        editor.remove(KEY_USERNAME);//editor.putString(KEY_USERNAME, "");
+        editor.apply();
+        finish();
+    }
 }
+
+

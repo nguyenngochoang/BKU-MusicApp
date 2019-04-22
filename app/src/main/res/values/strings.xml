@@ -1,7 +1,19 @@
 <resources>
 
+
+    <!--String related to First Screen-->
+
+    <string name="search">Tìm kiếm</string>
+    <string name="title">30 Club Music</string>
+    <string name="signin">Sign in</string>
+    <string name="browse">Browse</string>
+    <string name="list">List</string>
+    <string name="engvi">Eng/Vi</string>
+
+    <!--end of First Screen-->
+
     <!--String related to main screen -->
-    <string name="app_name">fireBase</string>
+    <string name="app_name">30 Club Music</string>
     <string name="name">Tên</string>
     <string name="pass">Password</string>
     <string name="login">Đăng nhập</string>
