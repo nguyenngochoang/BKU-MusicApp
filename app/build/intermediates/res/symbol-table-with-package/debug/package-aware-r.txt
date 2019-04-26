@@ -905,6 +905,7 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable addbutton
 drawable album
 drawable avatar
 drawable avd_hide_password
@@ -1013,6 +1014,7 @@ id birthday
 id birthdayError
 id blocking
 id bmb
+id bmb3
 id boomHorizontalThrow_1
 id boomHorizontalThrow_2
 id boomLine
@@ -1441,6 +1443,7 @@ layout activity_createaccount
 layout activity_forget_password
 layout activity_main
 layout activity_main_menu
+layout activity_playlist
 layout activity_user_information
 layout bmb
 layout bmb_ham_button
@@ -1485,6 +1488,7 @@ layout tooltip
 menu menu_user_information
 mipmap ic_launcher
 mipmap ic_launcher_round
+string CreatePlaylist
 string I_email
 string I_userName
 string abc_action_bar_home_description

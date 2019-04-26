@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v26/values-v26.xml",
+            "outputFile": "C:\\Users\\BEE ANH\\Desktop\\TTCNPM\\BKU-MusicApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v26\\values-v26.xml",
             "map": [
                 {
-                    "source": "/home/hoang/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/390db203945ef54d0c5d3b6aaafeed7d/res/values-v26/values-v26.xml",
+                    "source": "C:\\Users\\BEE ANH\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\55368a8f42ab6edf906f9660a45c8bfa\\res\\values-v26\\values-v26.xml",
                     "from": {
                         "startLines": "2,3,4,8,12,16",
                         "startColumns": "4,4,4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/home/hoang/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/52a027046812c6e98c56d6261d10daa9/res/values-v26/values-v26.xml",
+                    "source": "C:\\Users\\BEE ANH\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\9f4f254e2d5815f9a1e8658f661f72b0\\res\\values-v26\\values-v26.xml",
                     "from": {
                         "startLines": "2,6",
                         "startColumns": "4,4",

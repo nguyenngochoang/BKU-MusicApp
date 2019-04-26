@@ -57,7 +57,7 @@ public class MainMenu extends AppCompatActivity {
                 .listener(new OnBMClickListener() {
                     @Override
                     public void onBoomButtonClick(int index) {
-
+                        goToPlaylist();
                     }
                 })
                 .normalImageDrawable(getResources().getDrawable(R.drawable.album))
@@ -100,5 +100,11 @@ public class MainMenu extends AppCompatActivity {
         intent.putExtra("userInfo",user);
         startActivity(intent);
 
+    }
+
+    public void goToPlaylist(){
+        Intent intent2 = new Intent(MainMenu.this,Playlist.class);
+
+        startActivity(intent2);
     }
 }

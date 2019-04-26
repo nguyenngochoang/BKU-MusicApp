@@ -69,5 +69,9 @@
     <string name="feedback">Góp ý</string>
     <!--end of boom-menu's String-->
 
+    <!--Playlist-->
+        <string name="CreatePlaylist">Tạo Playlist</string>
+    <!--end of playlist-->
+
 </resources>
 
