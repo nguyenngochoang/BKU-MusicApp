@@ -8,14 +8,11 @@ import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 
-import android.os.Handler;
 import android.support.annotation.NonNull;
-import android.support.v4.view.ViewPager;
 import android.support.v4.widget.CompoundButtonCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import android.util.Log;
 import android.view.View;
 
 import com.google.firebase.database.DataSnapshot;
@@ -38,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     EditText editText ;
-    Aleart aleart;
+    Alert alert;
     CheckBox checkBox;
 
 
@@ -70,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//            setContentView(R.layout.activity_main_menu);
+
         checkBox =  findViewById(R.id.rememberBox);
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
@@ -107,6 +104,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed(){
         super.onBackPressed();
+        Intent intent = new Intent(this,FirstScreen.class);
+        startActivity(intent);
         finish();
 
     }
@@ -152,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
 
                         if(user!=null && !pass.isEmpty()){
                             if(user.password.equals(pass)){
-//                                goToInfoPage(user);
+
                                   goToMainMenu(user);
                             }
                         }
@@ -178,7 +177,7 @@ public class MainActivity extends AppCompatActivity {
 
         String passV = pass.getText().toString();
         if(nameV.isEmpty() || passV.isEmpty()){
-            aleart = new Aleart(1,getString(R.string.wrongInfo),MainActivity.this,"","");
+            alert = new Alert(1,getString(R.string.wrongInfo),MainActivity.this,"","");
 
         }
         else {
@@ -217,13 +216,13 @@ public class MainActivity extends AppCompatActivity {
                             goToMainMenu(user);
 
                         } else {
-                            aleart = new Aleart(1, getString(R.string.wrongInfo), MainActivity.this, "", "");
+                            alert = new Alert(1, getString(R.string.wrongInfo), MainActivity.this, "", "");
                             //
                         }
 
 
                     } else {
-                        aleart = new Aleart(1, getString(R.string.wrongInfo), MainActivity.this, "", "");
+                        alert = new Alert(1, getString(R.string.wrongInfo), MainActivity.this, "", "");
 
                     }
 

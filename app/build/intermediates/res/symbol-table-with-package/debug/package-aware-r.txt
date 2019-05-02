@@ -905,6 +905,7 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable admin
 drawable album
 drawable avatar
 drawable avd_hide_password
@@ -937,6 +938,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable edit
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable gradient_b
@@ -1022,6 +1024,7 @@ id boomParabola_3
 id boomParabola_4
 id boomRandom
 id bottom
+id browse
 id button
 id button2
 id button3
@@ -1130,6 +1133,7 @@ id email_login_form
 id email_sign_in_button
 id end
 id end_padder
+id engvi
 id enterAlways
 id enterAlwaysCollapsed
 id exitUntilCollapsed
@@ -1203,6 +1207,8 @@ id line3
 id linear
 id linearLayout
 id linearLayout2
+id linearLayout3
+id list
 id listMode
 id list_item
 id login_form
@@ -1306,6 +1312,7 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollable
+id searchView
 id search_badge
 id search_bar
 id search_button
@@ -1322,6 +1329,7 @@ id shortcut
 id showCustom
 id showHome
 id showTitle
+id signin
 id simpleCircle
 id smallLabel
 id snackbar_action
@@ -1351,6 +1359,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textView
 id textView2
+id textView3
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
@@ -1436,8 +1445,10 @@ layout abc_screen_toolbar
 layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
+layout activity_admin
 layout activity_change_info
 layout activity_createaccount
+layout activity_first_screen
 layout activity_forget_password
 layout activity_main
 layout activity_main_menu
@@ -1521,10 +1532,12 @@ string abc_toolbar_collapse_description
 string action_settings
 string action_sign_in
 string action_sign_in_short
+string admin
 string app_name
 string appbar_scrolling_view_behavior
 string blank
 string bottom_sheet_behavior
+string browse
 string cancel
 string change
 string character_counter_pattern
@@ -1552,6 +1565,7 @@ string create
 string date
 string default_web_client_id
 string emailNotFound
+string engvi
 string error
 string error_invalid_email
 string error_invalid_password
@@ -1568,6 +1582,7 @@ string google_storage_bucket
 string infoNotFound
 string infochanged
 string invalidDate
+string list
 string login
 string logout
 string male
@@ -1594,10 +1609,13 @@ string registerOK
 string rememberMe
 string retypepass
 string role
+string search
 string search_menu_title
 string send
 string showAlbum
+string signin
 string status_bar_notification_info_overflow
+string title
 string title_activity_forget_password
 string title_activity_main_menu
 string title_activity_sign_up

@@ -93,8 +93,15 @@ public class UserInformation extends AppCompatActivity {
             }
         });
 
+        try{
+            loadReference = storage.getReference().child(user.name+"/"+"avatars/");
+        }
+        catch (Exception e){
 
-        loadReference = storage.getReference().child(user.name+"/"+"avatars/");
+        }
+
+
+
 
 
         String hiddenEmail = user.email.substring(0,10)+"..@..";
