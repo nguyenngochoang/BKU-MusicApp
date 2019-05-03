@@ -48,6 +48,7 @@ public class UserInformation extends AppCompatActivity {
     EditText i_email;
     EditText i_birthday;
     EditText i_gender;
+    TextView i_nickname;
     TextView i_role;
     public ImageView imageView;
     public Uri filePath;
@@ -111,6 +112,7 @@ public class UserInformation extends AppCompatActivity {
         i_birthday = findViewById(R.id.i_birthday_field);
         i_gender = findViewById(R.id.i_gender_field);
         i_role = findViewById(R.id.i_role_field);
+        i_nickname = findViewById(R.id.i_nickname_field);
         imageView = findViewById(R.id.avatar);
         imageView.bringToFront();
 
@@ -119,7 +121,7 @@ public class UserInformation extends AppCompatActivity {
         i_birthday.setText(user.date);
         i_gender.setText(user.gender);
         i_role.setText(user.role);
-
+        i_nickname.setText(user.nickname);
 
         // -------------------------- getting user's avatar-------------------------
 

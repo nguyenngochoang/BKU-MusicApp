@@ -53,8 +53,31 @@ public class MainMenu extends AppCompatActivity {
         //---------------- create menu -------------------
         BoomMenuButton bmb = findViewById(R.id.bmb);
         bmb.setButtonEnum(ButtonEnum.Ham);
-        bmb.setPiecePlaceEnum(PiecePlaceEnum.HAM_5);
-        bmb.setButtonPlaceEnum(ButtonPlaceEnum.HAM_5);
+
+                // ------------ if user are admin, they will have this option ----------------------------
+
+                if(user.role.equals("admin")){
+                    bmb.setPiecePlaceEnum(PiecePlaceEnum.HAM_5);
+                    bmb.setButtonPlaceEnum(ButtonPlaceEnum.HAM_5);
+                    HamButton.Builder builder5 = new HamButton.Builder()
+                            .listener(new OnBMClickListener() {
+                                @Override
+                                public void onBoomButtonClick(int index) {
+                                    onGotoAdminPage();
+                                }
+                            })
+                            .normalImageDrawable(getResources().getDrawable(R.drawable.admin))
+                            .normalTextRes(R.string.admin);
+
+                    bmb.addBuilder(builder5);
+                }
+                else{
+                    bmb.setPiecePlaceEnum(PiecePlaceEnum.HAM_4);
+                    bmb.setButtonPlaceEnum(ButtonPlaceEnum.HAM_4);
+                }
+
+                // ------------- end of admin ------------------------------------------------------------
+
         //---------------- end of create menu ------------
 
         //-------------------- below codes are for adding and styling buttons one by one --------------
@@ -108,23 +131,7 @@ public class MainMenu extends AppCompatActivity {
 
         //-------------------- end of adding and styling buttons ---------------------------------
 
-        // ------------ if user are admin, they will have this option ----------------------------
 
-            if(user.role.equals("admin")){
-                HamButton.Builder builder5 = new HamButton.Builder()
-                        .listener(new OnBMClickListener() {
-                            @Override
-                            public void onBoomButtonClick(int index) {
-                                onGotoAdminPage();
-                            }
-                        })
-                        .normalImageDrawable(getResources().getDrawable(R.drawable.admin))
-                        .normalTextRes(R.string.admin);
-
-                bmb.addBuilder(builder5);
-            }
-
-        // ------------- end of admin ------------------------------------------------------------
 
     }
 

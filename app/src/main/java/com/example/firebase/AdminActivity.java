@@ -46,7 +46,7 @@ public class AdminActivity extends AppCompatActivity {
         rowCount =intent.getLongExtra("rowCount",1L);
 
         String[] column = { "Tên người dùng", "Email", "Ngày sinh",
-                "Giới tính", "Loại tài khoản","Chỉnh sửa","Xoá",
+                "Giới tính", "Loại tài khoản","Tình trạng","Chỉnh sửa","Cấm",
         };
 
         int cl=column.length;
@@ -144,18 +144,30 @@ public class AdminActivity extends AppCompatActivity {
                             editText.setText(row.get(i).role);
                             tableRow.addView(editText, tableRowParams);
                             break;
-
                         case 6:
+                            boolean status = row.get(i).status;
+                            if(status){
+                                editText.setText("Hoạt động");
+                            }
+                            else{
+                                editText.setText("Bị khoá");
+
+                            }
+
+                            tableRow.addView(editText, tableRowParams);
+                            break;
+
+                        case 7:
                             Button btn=new Button(this);
-                            btn.setId(1);
-                            btn.setText("Ban");
+                            btn.setId(i);
+                            btn.setText("Thay đổi");
                             btn.setLayoutParams(new TableLayout.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,TableRow.LayoutParams.WRAP_CONTENT));
                             tableRow.addView(btn, tableRowParams);
                             break;
-                        case 7:
+                        case 8:
                             Button btn2=new Button(this);
-                            btn2.setId(2);
-                            btn2.setText("Change");
+                            btn2.setId(i);
+                            btn2.setText("Cấm");
                             btn2.setLayoutParams(new TableLayout.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,TableRow.LayoutParams.WRAP_CONTENT));
                             tableRow.addView(btn2, tableRowParams);
                             break;
@@ -180,5 +192,8 @@ public class AdminActivity extends AppCompatActivity {
 
     }
 
+    public void Ban(){
+
+    }
 
 }

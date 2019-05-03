@@ -4,7 +4,7 @@
             "outputFile": "/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v18/values-v18.xml",
             "map": [
                 {
-                    "source": "/home/hoang/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/390db203945ef54d0c5d3b6aaafeed7d/res/values-v18/values-v18.xml",
+                    "source": "/home/hoang/.gradle/caches/transforms-2/files-2.1/6df6ef2e79b352fac9c076755b9cd616/res/values-v18/values-v18.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

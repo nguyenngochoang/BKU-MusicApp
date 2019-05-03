@@ -1090,6 +1090,8 @@ id c_email_field
 id c_female
 id c_gender
 id c_gender_group
+id c_nickname
+id c_nickname_field
 id c_other
 id c_pass
 id c_pass2
@@ -1162,6 +1164,8 @@ id i_email
 id i_email_field
 id i_gender
 id i_gender_field
+id i_nickname
+id i_nickname_field
 id i_role
 id i_role_field
 id i_username
@@ -1581,6 +1585,7 @@ string nav_header_subtitle
 string nav_header_title
 string navigation_drawer_close
 string navigation_drawer_open
+string nickname
 string ok
 string others
 string pass

@@ -32,6 +32,7 @@ public class ChangeInfoActivity extends AppCompatActivity {
 
     EditText c_email;
     EditText c_birthday;
+    EditText c_nickname;
 
     RadioGroup RG ;
     int selectedID ;
@@ -56,7 +57,7 @@ public class ChangeInfoActivity extends AppCompatActivity {
 
         passValidate = findViewById(R.id.c_pass_validate);
 
-
+        c_nickname = findViewById(R.id.c_nickname_field);
         c_email = findViewById(R.id.c_email_field);
         c_birthday = findViewById(R.id.c_birthday_field);
         RG = findViewById(R.id.c_gender_group);
@@ -189,6 +190,7 @@ public class ChangeInfoActivity extends AppCompatActivity {
         String email = c_email.getText().toString();
         String birthday = c_birthday.getText().toString();
         String gender= "";
+        String nickname = c_nickname.getText().toString();
         if(genderB!=null){
            gender  = genderB.getText().toString();
         }
@@ -199,7 +201,7 @@ public class ChangeInfoActivity extends AppCompatActivity {
         map.put("email",email);
         map.put("date",birthday);
         map.put("gender",gender);
-
+        map.put("nickname",nickname);
 
 
         final String pass = c_pass.getText().toString();

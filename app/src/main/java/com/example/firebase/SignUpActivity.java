@@ -300,7 +300,7 @@ public class SignUpActivity extends AppCompatActivity {
                     else{
                         try{
                             check = true;
-                            User user = new User(nameV, passValue,emailV,dateV,genderV,"user","");
+                            User user = new User(nameV,nameV, passValue,emailV,dateV,genderV,"user","",true);
                             String userId = nameV;
                             mDatabase.child(userId).setValue(user);
 

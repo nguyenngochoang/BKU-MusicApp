@@ -1,7 +1,7 @@
 <resources>
 
     <!--String related to main screen -->
-    <string name="app_name">fireBase</string>
+    <string name="app_name">30 Music </string>
     <string name="name">Tên</string>
     <string name="pass">Password</string>
     <string name="login">Đăng nhập</string>
@@ -17,7 +17,7 @@
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email đã dùng để đăng kí tài khoản</string>
-    <string name="prompt_password">Password</string>
+    <string name="prompt_password">Mật khẩu</string>
     <string name="action_sign_in">Đăng kí</string>
     <string name="action_sign_in_short">Đăng kí tài khoản</string>
     <string name="username">Tên đăng nhập</string>
@@ -31,9 +31,9 @@
     <string name="registerOK">Tạo tài khoản thành công.</string>
     <string name="title_activity_forget_password">Forget Password</string>
     <string name="error_invalid_email">Địa chỉ email không hợp lệ!</string>
-    <string name="error_invalid_password">Password cần lớn hơn 4 kí tự</string>
+    <string name="error_invalid_password">Mật khẩu cần lớn hơn 4 kí tự</string>
     <string name="invalidDate">Ngày sinh không hợp lệ </string>
-    <string name="send">Send</string>
+    <string name="send">Gửi</string>
     <string name="emailNotFound">Email không chính xác </string>
     <string name="infoNotFound"> Không tìm thấy người dùng này.</string>
     <string name="passwordGenerated">Mật khẩu mới đã được gửi đến email của bạn.</string>
@@ -47,12 +47,14 @@
     <string name="updateInfo">Chỉnh sửa thông tin</string>
     <string name="action_settings">what</string>
     <string name="logout">Đăng xuất</string>
+    <string name="nickname">Tên hiển thị</string>
+
     <!--End of userInformation-->
 
     <!--String related to change info-->
     <string name="change">Xác nhận</string>
-    <string name="retypepass">Nhập lại password</string>
-    <string name="passwordmatch">Pasword không khớp!</string>
+    <string name="retypepass">Nhập lại mật khẩu</string>
+    <string name="passwordmatch">Mật khẩu không khớp!</string>
     <string name="infochanged">Thay đổi thông tin thành công</string>
     <string name="title_activity_main_menu">MainMenu</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
