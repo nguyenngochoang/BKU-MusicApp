@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:2:1-41:12
-INJECTED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:2:1-41:12
-INJECTED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:2:1-41:12
-INJECTED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:2:1-41:12
+ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:2:1-42:12
+INJECTED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:2:1-42:12
+INJECTED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:2:1-42:12
+INJECTED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:2:1-42:12
 MERGED from [com.android.support:design:26.1.0] /home/hoang/.gradle/caches/transforms-2/files-2.1/42485c5008c1d052872bef340746e5bb/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:appcompat-v7:26.1.0] /home/hoang/.gradle/caches/transforms-2/files-2.1/6df6ef2e79b352fac9c076755b9cd616/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/hoang/.gradle/caches/transforms-2/files-2.1/378b75502b24f67cb81b3de0ed7f0684/AndroidManifest.xml:2:1-11:12
@@ -43,20 +43,20 @@ MERGED from [com.android.support:support-core-utils:26.1.0] /home/hoang/.gradle/
 MERGED from [com.android.support:support-compat:26.1.0] /home/hoang/.gradle/caches/transforms-2/files-2.1/828278611cba6bc379a233586481d9dc/AndroidManifest.xml:17:1-31:12
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] /home/hoang/.gradle/caches/transforms-2/files-2.1/86c23a943490ec12aa023a1c59ff4d9f/AndroidManifest.xml:17:1-24:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/hoang/.gradle/caches/transforms-2/files-2.1/7d26461b133a40096c90a789644d9cab/AndroidManifest.xml:17:1-30:12
-INJECTED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:2:1-41:12
-INJECTED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:2:1-41:12
-INJECTED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:2:1-41:12
+INJECTED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:2:1-42:12
+INJECTED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:2:1-42:12
+INJECTED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:2:1-42:12
 	package
 		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:3:5-35
 		INJECTED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml
 		INJECTED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml
-		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:2:1-41:12
+		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:2:1-42:12
 		INJECTED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml
-		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:2:1-41:12
+		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:2:1-42:12
 		INJECTED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:2:11-69
@@ -107,7 +107,7 @@ ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManife
 	android:name
 		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:10:22-77
 application
-ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:12:5-39:19
+ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:12:5-40:19
 MERGED from [com.android.support:design:26.1.0] /home/hoang/.gradle/caches/transforms-2/files-2.1/42485c5008c1d052872bef340746e5bb/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:design:26.1.0] /home/hoang/.gradle/caches/transforms-2/files-2.1/42485c5008c1d052872bef340746e5bb/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:appcompat-v7:26.1.0] /home/hoang/.gradle/caches/transforms-2/files-2.1/6df6ef2e79b352fac9c076755b9cd616/AndroidManifest.xml:25:5-29:19
@@ -186,52 +186,56 @@ MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/hoang/.gradle/caches/tr
 		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:13:9-35
 	android:theme
 		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:18:9-40
+activity#com.example.firebase.Playlist
+ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:19:9-55
+	android:name
+		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:19:19-43
 activity#com.example.firebase.AdminActivity
-ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:19:9-60
+ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:20:9-51
 	android:name
-		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:19:19-48
+		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:20:19-48
 activity#com.example.firebase.MainMenu
-ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:20:9-46
+ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:21:9-46
 	android:name
-		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:20:19-43
+		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:21:19-43
 activity#com.example.firebase.ChangeInfoActivity
-ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:21:9-56
+ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:22:9-56
 	android:name
-		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:21:19-53
+		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:22:19-53
 activity#com.example.firebase.UserInformation
-ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:22:9-25:59
+ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:23:9-26:59
 	android:label
-		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:24:13-68
+		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:25:13-68
 	android:theme
-		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:25:13-56
+		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:26:13-56
 	android:name
-		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:23:13-44
+		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:24:13-44
 activity#com.example.firebase.ForgetPasswordActivity
-ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:26:9-28:70
+ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:27:9-29:70
 	android:label
-		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:28:13-67
+		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:29:13-67
 	android:name
-		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:27:13-51
+		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:28:13-51
 activity#com.example.firebase.SignUpActivity
-ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:29:9-31:62
+ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:30:9-32:62
 	android:label
-		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:31:13-59
+		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:32:13-59
 	android:name
-		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:30:13-43
+		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:31:13-43
 activity#com.example.firebase.MainActivity
-ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:32:9-38:20
+ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:33:9-39:20
 	android:name
-		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:32:19-47
+		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:33:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:33:13-37:29
+ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:34:13-38:29
 action#android.intent.action.MAIN
-ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:34:17-69
+ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:35:17-69
 	android:name
-		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:34:25-66
+		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:35:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:36:17-77
+ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:37:17-77
 	android:name
-		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:36:27-74
+		ADDED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml:37:27-74
 uses-sdk
 INJECTED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/hoang/AndroidStudioProjects/fireBase/app/src/main/AndroidManifest.xml

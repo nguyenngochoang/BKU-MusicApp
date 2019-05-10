@@ -70,6 +70,7 @@
     <string name="chat">Chat</string>
     <string name="feedback">Góp ý</string>
     <string name="admin">Quản lí người dùng</string>
+    <string name="playlist">Tạo playlist</string>
     <!--end of boom-menu's String-->
 
 </resources>

@@ -965,6 +965,7 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable piece
 drawable piece_dot
+drawable playlist
 drawable ripple_effect
 drawable shape_oval_normal
 drawable shape_rectangle_normal
@@ -974,9 +975,11 @@ drawable user
 id ALT
 id CTRL
 id FUNCTION
+id LN_layout
 id META
 id RG
 id SHIFT
+id SV_1
 id SYM
 id action0
 id action_bar
@@ -1378,7 +1381,6 @@ id uniform
 id up
 id useLogo
 id username
-id viewPager
 id view_offset_helper
 id visible
 id wide
@@ -1448,6 +1450,7 @@ layout activity_createaccount
 layout activity_forget_password
 layout activity_main
 layout activity_main_menu
+layout activity_playlist
 layout activity_user_information
 layout bmb
 layout bmb_ham_button
@@ -1596,6 +1599,7 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string playlist
 string project_id
 string prompt_email
 string prompt_password

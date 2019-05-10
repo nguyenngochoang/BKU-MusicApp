@@ -6,17 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".MainMenu">
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewPager"
-        android:layout_width="0dp"
-        android:layout_height="967dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <ScrollView
+        android:id="@+id/SV_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="513dp"
+        tools:layout_editor_absoluteY="861dp">
 
-    </android.support.v4.view.ViewPager>
+        <LinearLayout
+            android:id="@+id/LN_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"></LinearLayout>
+    </ScrollView>
 
     <com.nightonke.boommenu.BoomMenuButton
         android:id="@+id/bmb"
@@ -29,6 +31,8 @@
         android:visibility="visible"
         app:bmb_buttonEnum="ham"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" >
+
+    </com.nightonke.boommenu.BoomMenuButton>
 
 </android.support.constraint.ConstraintLayout>
