@@ -5,16 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.Activity.OfflineActivity">
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/activity_offline_toolbar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    <android.support.design.widget.AppBarLayout
+
+        android:id="@+id/activity_offline_appbar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"></android.support.v7.widget.Toolbar>
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/activity_offline_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"></android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_below="@id/activity_offline_toolbar"
+        android:layout_height="match_parent"
         android:id="@+id/activity_offline_recycler"
-        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+        android:layout_below="@id/activity_offline_appbar">
 
+
+    </android.support.v7.widget.RecyclerView>
 
 </RelativeLayout>
+
+

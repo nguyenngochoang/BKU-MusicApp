@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout
 
-</android.support.constraint.ConstraintLayout>
+        android:id="@+id/fragment_seach_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/fragment_seach_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"></android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_seach_listsong"
+        android:layout_below="@id/fragment_seach_appbar">
+            
+
+    </android.support.v7.widget.RecyclerView>
+    <TextView
+        android:id="@+id/kocodulieu"
+        android:visibility="gone"
+        android:textSize="35sp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Không có dữ liệu"/>
+
+</RelativeLayout>

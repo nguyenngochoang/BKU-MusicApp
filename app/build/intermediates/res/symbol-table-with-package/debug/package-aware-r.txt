@@ -411,9 +411,15 @@ attr rippleColor
 attr scopeUris
 attr scrimAnimationDuration
 attr scrimVisibleHeightTrigger
+attr searchBackIcon
+attr searchBackground
+attr searchCloseIcon
 attr searchHintIcon
 attr searchIcon
+attr searchSuggestionBackground
+attr searchSuggestionIcon
 attr searchViewStyle
+attr searchVoiceIcon
 attr seekBarStyle
 attr selectableItemBackground
 attr selectableItemBackgroundBorderless
@@ -644,6 +650,7 @@ color primary_text_disabled_material_dark
 color primary_text_disabled_material_light
 color ripple_material_dark
 color ripple_material_light
+color search_layover_bg
 color secondary_text_default_material_dark
 color secondary_text_default_material_light
 color secondary_text_disabled_material_dark
@@ -846,6 +853,8 @@ dimen notification_small_icon_size_as_large
 dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
+dimen search_icon_padding
+dimen search_view_text_padding
 dimen text_margin
 dimen tooltip_corner_radius
 dimen tooltip_horizontal_padding
@@ -948,6 +957,7 @@ drawable baseline_arrow_downward_black_18dp
 drawable bug
 drawable button
 drawable chat
+drawable color_cursor_white
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -979,6 +989,13 @@ drawable edit
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable gradient_b
+drawable ic_action_action_search
+drawable ic_action_navigation_arrow_back
+drawable ic_action_navigation_arrow_back_inverted
+drawable ic_action_navigation_close
+drawable ic_action_navigation_close_inverted
+drawable ic_action_voice_search
+drawable ic_action_voice_search_inverted
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_menu_camera
@@ -987,6 +1004,7 @@ drawable ic_menu_manage
 drawable ic_menu_send
 drawable ic_menu_share
 drawable ic_menu_slideshow
+drawable ic_suggestion
 drawable iconback
 drawable iconfloatingactionbutton
 drawable iconlove
@@ -1001,6 +1019,7 @@ drawable iconsearch
 drawable iconshuffled
 drawable iconsuffle
 drawable iconsyned
+drawable icontimkiem
 drawable icontrangchu
 drawable mp3filelocal
 drawable navigation_empty_icon
@@ -1045,6 +1064,7 @@ id action_bar_title
 id action_container
 id action_context_bar
 id action_divider
+id action_empty_btn
 id action_image
 id action_menu_divider
 id action_menu_presenter
@@ -1053,6 +1073,8 @@ id action_mode_bar_stub
 id action_mode_close_button
 id action_settings
 id action_text
+id action_up_btn
+id action_voice_btn
 id actions
 id activity_allalbum_listallalbum
 id activity_allalbum_toolbar
@@ -1071,6 +1093,7 @@ id activity_listsongactivity_floatingactionbutton
 id activity_listsongactivity_imglistsong
 id activity_listsongactivity_listsongrecycerview
 id activity_listsongactivity_toolbarlist
+id activity_offline_appbar
 id activity_offline_recycler
 id activity_offline_toolbar
 id activity_playmusic_curtime
@@ -1283,6 +1306,9 @@ id fragment_listmusic_player_list
 id fragment_playlist_listplaylist
 id fragment_playlist_more
 id fragment_playlist_titleall
+id fragment_seach_appbar
+id fragment_seach_listsong
+id fragment_seach_toolbar
 id fragment_songlike_recyclerview
 id fragment_songlike_title
 id fragment_songlike_titleall
@@ -1339,6 +1365,7 @@ id infoTitle
 id invisible
 id italic
 id item_touch_helper_previous_elevation
+id kocodulieu
 id largeLabel
 id layout
 id left
@@ -1445,6 +1472,7 @@ id progress_circular
 id progress_horizontal
 id radio
 id rememberBox
+id reseach
 id right
 id right_icon
 id right_side
@@ -1457,6 +1485,7 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollable
+id searchTextView
 id searchView
 id search_badge
 id search_bar
@@ -1464,9 +1493,11 @@ id search_button
 id search_close_btn
 id search_edit_frame
 id search_go_btn
+id search_layout
 id search_mag_icon
 id search_plate
 id search_src_text
+id search_top_bar
 id search_voice_btn
 id select_dialog_listview
 id shadow
@@ -1494,6 +1525,9 @@ id start
 id status_bar_latest_event_content
 id submenuarrow
 id submit_area
+id suggestion_icon
+id suggestion_list
+id suggestion_text
 id tabMode
 id tableLayout
 id tableLayout2
@@ -1524,6 +1558,7 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id transparent_view
 id uniform
 id up
 id useLogo
@@ -1661,12 +1696,15 @@ layout notification_template_media
 layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout search_view
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout suggest_item
 layout support_simple_spinner_dropdown_item
 layout tooltip
 menu menu_user_information
+menu reseachmenu
 menu songmenu
 mipmap ic_launcher
 mipmap ic_launcher_round
@@ -1784,6 +1822,7 @@ string rememberMe
 string retypepass
 string role
 string search
+string search_hint
 string search_menu_title
 string send
 string showAlbum
@@ -1975,6 +2014,7 @@ style Base_Widget_Design_TabLayout
 style CardView
 style CardView_Dark
 style CardView_Light
+style MSV_ImageButton
 style Platform_AppCompat
 style Platform_AppCompat_Light
 style Platform_ThemeOverlay_AppCompat
@@ -2243,6 +2283,7 @@ styleable LinearLayoutCompat android_gravity android_orientation android_baselin
 styleable LinearLayoutCompat_Layout android_layout_gravity android_layout_width android_layout_height android_layout_weight
 styleable ListPopupWindow android_dropDownHorizontalOffset android_dropDownVerticalOffset
 styleable LoadingImageView circleCrop imageAspectRatio imageAspectRatioAdjust
+styleable MaterialSearchView android_textColor android_textColorHint android_hint searchBackIcon searchBackground searchCloseIcon searchSuggestionBackground searchSuggestionIcon searchVoiceIcon
 styleable MenuGroup android_enabled android_id android_visible android_menuCategory android_orderInCategory android_checkableBehavior
 styleable MenuItem android_icon android_enabled android_id android_checked android_visible android_menuCategory android_orderInCategory android_title android_titleCondensed android_alphabeticShortcut android_numericShortcut android_checkable android_onClick actionLayout actionProviderClass actionViewClass alphabeticModifiers contentDescription iconTint iconTintMode numericModifiers showAsAction tooltipText
 styleable MenuView android_windowAnimationStyle android_itemTextAppearance android_horizontalDivider android_verticalDivider android_headerBackground android_itemBackground android_itemIconDisabledAlpha preserveIconSpacing subMenuArrow

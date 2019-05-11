@@ -35,7 +35,7 @@
         android:text="ngo minh nhut"/>
     <ImageView
         android:id="@+id/dong_songlike_iconlike"
-        android:src="@drawable/iconlove"
+        android:src="@drawable/theredot"
         android:layout_alignParentRight="true"
         android:layout_marginRight="8dp"
         android:layout_centerVertical="true"

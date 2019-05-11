@@ -14,8 +14,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Toast;
 
 import com.Adapter.SongOfflineAdapter;
@@ -28,10 +32,14 @@ public class OfflineActivity extends AppCompatActivity {
     Toolbar toolbar;
     RecyclerView recyclerView;
     ArrayList<Song> songs;
+    SearchView searchView;
+    SongOfflineAdapter songOfflineAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_offline);
+        anhxa();
+
         init();
         if(ContextCompat.checkSelfPermission(OfflineActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE)!= PackageManager.PERMISSION_GRANTED){
             if(ActivityCompat.shouldShowRequestPermissionRationale(OfflineActivity.this,Manifest.permission.READ_EXTERNAL_STORAGE)){
@@ -47,9 +55,32 @@ public class OfflineActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.reseachmenu,menu);
+        MenuItem menuItem=menu.findItem(R.id.reseach);
+        searchView = (SearchView) menuItem.getActionView();
+        searchView.setMaxWidth(Integer.MAX_VALUE);
+        searchView.setImeOptions(EditorInfo.IME_ACTION_DONE);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                songOfflineAdapter.getFilter().filter(newText);
+                return true;
+//                return false;
+            }
+        });
+        return true;
+    }
+
     private void dostuff() {
         getmusic();
-        SongOfflineAdapter songOfflineAdapter =new SongOfflineAdapter(songs,OfflineActivity.this);
+        songOfflineAdapter =new SongOfflineAdapter(songs,OfflineActivity.this);
         recyclerView.setLayoutManager(new LinearLayoutManager(OfflineActivity.this));
         recyclerView.setAdapter(songOfflineAdapter);
     }
@@ -77,11 +108,13 @@ public class OfflineActivity extends AppCompatActivity {
             while (musicCursor.moveToNext());
         }
     }
-
-    private void init() {
+    private void anhxa(){
         songs=new ArrayList<>();
         recyclerView=findViewById(R.id.activity_offline_recycler);
         toolbar=findViewById(R.id.activity_offline_toolbar);
+    }
+    private void init() {
+
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Offline music");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -89,7 +122,13 @@ public class OfflineActivity extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                if(!searchView.isIconified())
+                    searchView.onActionViewCollapsed();
+//
+                else
+                    finish();
+
+
             }
         });
 

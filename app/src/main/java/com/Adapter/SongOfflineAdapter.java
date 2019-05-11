@@ -9,26 +9,35 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.Activity.Playermusic;
 import com.Model.Song;
+import com.StringUtils;
 import com.example.firebase.R;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Collection;
 
-public class SongOfflineAdapter extends RecyclerView.Adapter<SongOfflineAdapter.ViewHoder> {
+import okhttp3.internal.Util;
+
+public class SongOfflineAdapter extends RecyclerView.Adapter<SongOfflineAdapter.ViewHoder> implements Filterable {
     ArrayList<Song> songs;
+    ArrayList<Song> songsfull;
     Context context;
 
     public SongOfflineAdapter(ArrayList<Song> songs, Context context) {
         this.songs = songs;
         this.context = context;
+        songsfull =new ArrayList<>();
+        songsfull.addAll(songs);
     }
 
     @Override
@@ -61,6 +70,39 @@ public class SongOfflineAdapter extends RecyclerView.Adapter<SongOfflineAdapter.
     public int getItemCount() {
         return songs.size();
     }
+
+    @Override
+    public Filter getFilter() {
+        return songofffillter;
+    }
+    private Filter songofffillter=new Filter() {
+        @Override
+        protected FilterResults performFiltering(CharSequence constraint) {
+            ArrayList<Song> filtersong =new ArrayList<>();
+            if(constraint==null ||constraint.length()==0){
+                filtersong.addAll(songsfull);
+            }
+            else
+            {
+                String filterPartren= StringUtils.removeAccent(constraint.toString());
+                for(Song item:songsfull){
+                    if(StringUtils.removeAccent(item.getNamesong()).contains(constraint)){
+                        filtersong.add(item);
+                    }
+                }
+            }
+            FilterResults results=new FilterResults();
+            results.values=filtersong;
+            return  results;
+        }
+
+        @Override
+        protected void publishResults(CharSequence constraint, FilterResults results) {
+            songs.clear();
+            songs.addAll((Collection<? extends Song>) results.values);
+            notifyDataSetChanged();
+        }
+    };
 
 
     public class ViewHoder extends RecyclerView.ViewHolder{
