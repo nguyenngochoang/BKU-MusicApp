@@ -82,5 +82,9 @@
     <string name="admin">Quản lí người dùng</string>
     <!--end of boom-menu's String-->
 
+    <!--Playlist-->
+    <string name="playlist">Danh sách phát nhạc</string>
+    <!--Playlist-->
+
 </resources>
 
