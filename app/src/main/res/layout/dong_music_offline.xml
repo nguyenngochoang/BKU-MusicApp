@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/dong_music_offline_img"
+        android:layout_width="80dp"
+        android:scaleType="fitXY"
+        android:layout_margin="10dp"
+        android:layout_height="80dp" />
+    <TextView
+        android:id="@+id/dong_music_offline_name"
+        android:layout_toRightOf="@id/dong_music_offline_img"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:textSize="18sp"
+        android:textColor="#d21a1a"
+        android:text="Vi yeu la nho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        />
+    <TextView
+        android:id="@+id/dong_music_offline_singer"
+        android:textSize="18sp"
+        android:textColor="#921bdc"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@id/dong_music_offline_img"
+        android:layout_below="@id/dong_music_offline_name"
+        android:text="ngo minh nhut"/>
+
+</RelativeLayout>

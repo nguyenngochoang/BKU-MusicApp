@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-port/values-port.xml",
+            "outputFile": "C:\\Users\\SilverP\\Desktop\\BKU-MusicApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
             "map": [
                 {
-                    "source": "/home/hoang/.gradle/caches/transforms-2/files-2.1/6df6ef2e79b352fac9c076755b9cd616/res/values-port/values-port.xml",
+                    "source": "C:\\Users\\SilverP\\.gradle\\caches\\transforms-2\\files-2.1\\3f76fd30b807c4a2a93f1cd069081ecf\\res\\values-port\\values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

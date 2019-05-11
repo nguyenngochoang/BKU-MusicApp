@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
+            "outputFile": "C:\\Users\\SilverP\\Desktop\\BKU-MusicApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "/home/hoang/.gradle/caches/transforms-2/files-2.1/6df6ef2e79b352fac9c076755b9cd616/res/values-v16/values-v16.xml",
+                    "source": "C:\\Users\\SilverP\\.gradle\\caches\\transforms-2\\files-2.1\\3f76fd30b807c4a2a93f1cd069081ecf\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/home/hoang/.gradle/caches/transforms-2/files-2.1/828278611cba6bc379a233586481d9dc/res/values-v16/values-v16.xml",
+                    "source": "C:\\Users\\SilverP\\.gradle\\caches\\transforms-2\\files-2.1\\db4bbb6d8442fbef0c4b733ed05a17ce\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

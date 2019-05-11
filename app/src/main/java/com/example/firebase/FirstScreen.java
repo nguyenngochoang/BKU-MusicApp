@@ -9,6 +9,9 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.Activity.OfflineActivity;
+import com.Activity.OnlineActivity;
+
 import static com.example.firebase.MainActivity.PREF_NAME;
 
 public class FirstScreen extends AppCompatActivity {
@@ -29,8 +32,15 @@ public class FirstScreen extends AppCompatActivity {
 
 
     }
+    public void gotoOffline(View view){
+        Intent intent=new Intent(this, OfflineActivity.class);
+        startActivity(intent);
+    }
 
-
+    public void gotoOnline(View view){
+        Intent intent=new Intent(this, OnlineActivity.class);
+        startActivity(intent);
+    }
     public void goToLogin(View view){
         Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent);

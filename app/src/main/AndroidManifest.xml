@@ -16,6 +16,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name="com.Activity.OfflineActivity"></activity>
+        <activity android:name="com.Activity.Playermusic" />
+        <activity android:name="com.Activity.Listsongactivity" />
+        <activity android:name="com.Activity.AllthemeandStyleActivity" />
+        <activity android:name="com.Activity.AllplaylistActivity" />
+        <activity android:name="com.Activity.Allalbumactivity" />
+        <activity android:name="com.Activity.OnlineActivity" />
         <activity android:name=".FirstScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,9 +43,7 @@
         <activity
             android:name=".SignUpActivity"
             android:label="@string/title_activity_sign_up" />
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

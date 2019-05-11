@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="15"
+        android:minSdkVersion="16"
         android:targetSdkVersion="28" />
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
@@ -33,6 +33,13 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.Activity.OfflineActivity" />
+        <activity android:name="com.Activity.Playermusic" />
+        <activity android:name="com.Activity.Listsongactivity" />
+        <activity android:name="com.Activity.AllthemeandStyleActivity" />
+        <activity android:name="com.Activity.AllplaylistActivity" />
+        <activity android:name="com.Activity.Allalbumactivity" />
+        <activity android:name="com.Activity.OnlineActivity" />
         <activity android:name="com.example.firebase.FirstScreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -53,8 +60,7 @@
         <activity
             android:name="com.example.firebase.SignUpActivity"
             android:label="@string/title_activity_sign_up" />
-        <activity android:name="com.example.firebase.MainActivity" >
-        </activity>
+        <activity android:name="com.example.firebase.MainActivity" />
 
         <meta-data
             android:name="android.support.VERSION"

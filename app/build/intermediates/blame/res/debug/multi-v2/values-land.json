@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/hoang/AndroidStudioProjects/fireBase/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
+            "outputFile": "C:\\Users\\SilverP\\Desktop\\BKU-MusicApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
             "map": [
                 {
-                    "source": "/home/hoang/.gradle/caches/transforms-2/files-2.1/6df6ef2e79b352fac9c076755b9cd616/res/values-land/values-land.xml",
+                    "source": "C:\\Users\\SilverP\\.gradle\\caches\\transforms-2\\files-2.1\\3f76fd30b807c4a2a93f1cd069081ecf\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/home/hoang/.gradle/caches/transforms-2/files-2.1/42485c5008c1d052872bef340746e5bb/res/values-land/values-land.xml",
+                    "source": "C:\\Users\\SilverP\\.gradle\\caches\\transforms-2\\files-2.1\\39f4601ae96fda4bb85ed7b37722e35c\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

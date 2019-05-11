@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.Activity.AllthemeandStyleActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/activity_allthemeand_style_toobar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"></android.support.v7.widget.Toolbar>
+        <TextView
+            android:text="Tất cả chủ đề"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            android:layout_margin="10dp"
+            android:id="@+id/activity_allthemeand_style_titletheme"
+            android:layout_below="@id/activity_allthemeand_style_toobar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_below="@id/activity_allthemeand_style_titletheme"
+            android:id="@+id/activity_allthemeand_style_themerecyclerview"
+            android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+        <TextView
+            android:text="Tất cả thể loại"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            android:layout_margin="10dp"
+            android:id="@+id/activity_allthemeand_style_titlestyle"
+            android:layout_below="@id/activity_allthemeand_style_themerecyclerview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_below="@id/activity_allthemeand_style_titlestyle"
+            android:id="@+id/activity_allthemeand_style_stylerecyclerview"
+            android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+
+</ScrollView>
