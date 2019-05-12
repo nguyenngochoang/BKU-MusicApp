@@ -86,7 +86,7 @@ public class SongOfflineAdapter extends RecyclerView.Adapter<SongOfflineAdapter.
             {
                 String filterPartren= StringUtils.removeAccent(constraint.toString());
                 for(Song item:songsfull){
-                    if(StringUtils.removeAccent(item.getNamesong()).contains(constraint)){
+                    if(StringUtils.removeAccent(item.getNamesong()).contains(filterPartren)){
                         filtersong.add(item);
                     }
                 }
