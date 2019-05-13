@@ -12,8 +12,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.View;
 import android.widget.Toast;
 
+import com.Activity.OnlineActivity;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -96,11 +98,11 @@ public class MainMenu extends AppCompatActivity {
                 .listener(new OnBMClickListener() {
                     @Override
                     public void onBoomButtonClick(int index) {
-
+                        ongotoOnlineMusic();
                     }
                 })
-                .normalImageDrawable(getResources().getDrawable(R.drawable.chat))
-                .normalTextRes(R.string.chat);
+                .normalImageDrawable(getResources().getDrawable(R.drawable.playlist))
+                .normalTextRes(R.string.onlinemusic);
 
         bmb.addBuilder(builder3);
 
@@ -136,6 +138,12 @@ public class MainMenu extends AppCompatActivity {
 
         // ------------- end of admin ------------------------------------------------------------
 
+    }
+
+    public void ongotoOnlineMusic(){
+        Intent intent = new Intent(MainMenu.this, OnlineActivity.class);
+        intent.putExtra("userInfo",user);
+        startActivity(intent);
     }
 
     public void goToInfoPage(final User user){
@@ -193,6 +201,12 @@ public class MainMenu extends AppCompatActivity {
         editor.remove(KEY_USERNAME);//editor.putString(KEY_USERNAME, "");
         editor.apply();
         finish();
+    }
+
+    public void goToMyPlaylist(View view){
+        Intent intent = new Intent(MainMenu.this,Playlist.class);
+        intent.putExtra("userInfo",user);
+        startActivity(intent);
     }
 }
 

@@ -27,6 +27,7 @@ import com.example.firebase.R;
 //import com.example.silverp.musicdemo.Activity.PlaymusicActivity;
 //import com.example.silverp.musicdemo.Model.Song;
 //import com.example.silverp.musicdemo.R;
+import com.example.firebase.User;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -35,11 +36,17 @@ public class SonglistAdapter extends RecyclerView.Adapter<SonglistAdapter.ViewHo
     Context context;
     ArrayList<Song> songs;
     DownloadManager downloadManager;
+    User user;
 
 
     public SonglistAdapter(Context context, ArrayList<Song> songs) {
         this.context = context;
         this.songs = songs;
+
+    }
+
+    public SonglistAdapter(User user){
+        this.user = user;
     }
 
     @NonNull
@@ -79,6 +86,9 @@ public class SonglistAdapter extends RecyclerView.Adapter<SonglistAdapter.ViewHo
                                 Long reference=downloadManager.enqueue(request);
 
                                 return true;
+                            }
+                            case R.id.songmenu_addplaylist:{
+
                             }
                         }
                         return false;

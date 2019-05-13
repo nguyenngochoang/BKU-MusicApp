@@ -16,7 +16,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.Activity.OfflineActivity"></activity>
+        <activity android:name=".Playlist"></activity>
+        <activity android:name="com.Activity.OfflineActivity" />
         <activity android:name="com.Activity.Playermusic" />
         <activity android:name="com.Activity.Listsongactivity" />
         <activity android:name="com.Activity.AllthemeandStyleActivity" />

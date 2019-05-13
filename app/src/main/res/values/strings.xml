@@ -25,6 +25,8 @@
     <string name="title_activity_sign_up">Sign up</string>
     <string name="rememberMe">Ghi nhớ đăng nhập</string>
     <string name="connectionLost">Vui lòng kiểm tra kết nối mạng</string>
+    <string name="myplaylist">Play list của tôi</string>
+    <string name="createPlaylist">Tạo playlist </string>
     <!--End of main screen -->
 
     <!-- Strings related to login -->
@@ -77,7 +79,7 @@
     <!--String used to set boom-menu-->
     <string name="userInfo">Thông tin cá nhân</string>
     <string name="showAlbum">Album</string>
-    <string name="chat">Chat</string>
+    <string name="onlinemusic">Online Music</string>
     <string name="feedback">Góp ý</string>
     <string name="admin">Quản lí người dùng</string>
     <!--end of boom-menu's String-->

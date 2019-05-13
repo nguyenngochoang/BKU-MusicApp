@@ -1038,6 +1038,7 @@ drawable notify_panel_notification_icon_bg
 drawable piece
 drawable piece_dot
 drawable play
+drawable playlist
 drawable ripple_effect
 drawable shape_oval_normal
 drawable shape_rectangle_normal
@@ -1049,9 +1050,11 @@ drawable white_radius
 id ALT
 id CTRL
 id FUNCTION
+id LN_layout
 id META
 id RG
 id SHIFT
+id SV_1
 id SYM
 id action0
 id action_bar
@@ -1135,6 +1138,8 @@ id button
 id button2
 id button3
 id button4
+id button5
+id button6
 id buttonPanel
 id buttonPlaceAlignment_bl
 id buttonPlaceAlignment_bottom
@@ -1564,7 +1569,6 @@ id up
 id useLogo
 id username
 id vertical
-id viewPager
 id view_offset_helper
 id visible
 id wide
@@ -1642,6 +1646,7 @@ layout activity_main_menu
 layout activity_offline
 layout activity_online
 layout activity_playermusic
+layout activity_playlist
 layout activity_user_information
 layout bmb
 layout bmb_ham_button
@@ -1753,7 +1758,6 @@ string browse
 string cancel
 string change
 string character_counter_pattern
-string chat
 string common_google_play_services_enable_button
 string common_google_play_services_enable_text
 string common_google_play_services_enable_title
@@ -1774,6 +1778,7 @@ string common_signin_button_text
 string common_signin_button_text_long
 string connectionLost
 string create
+string createPlaylist
 string date
 string default_web_client_id
 string emailNotFound
@@ -1798,6 +1803,7 @@ string list
 string login
 string logout
 string male
+string myplaylist
 string name
 string nav_header_desc
 string nav_header_subtitle
@@ -1805,6 +1811,7 @@ string nav_header_title
 string navigation_drawer_close
 string navigation_drawer_open
 string ok
+string onlinemusic
 string others
 string pass
 string passwordGenerated
