@@ -7,6 +7,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.Adapter.Adapter_main_home_seach;
 import com.Fragment.Fragment_home_page;
@@ -26,7 +27,7 @@ public class OnlineActivity extends AppCompatActivity {
     TabLayout maintablayout;
     ViewPager mainviewpager;
     User user;
-    List<String> playlists;
+    public static List<String> playlists;
     DatabaseReference mDatabase;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,9 +43,9 @@ public class OnlineActivity extends AppCompatActivity {
 
         }
 
-        playlists = new ArrayList<String>();
-        mDatabase = FirebaseDatabase.getInstance().getReference();
-        loadUserPlaylist(); //read all the playlists name
+        if(user!=null)
+            loadUserPlaylist(); //read all the playlists name
+
     }
     private void anhxa(){
         maintablayout=(TabLayout) findViewById(R.id.main_tablayout);
@@ -63,6 +64,8 @@ public class OnlineActivity extends AppCompatActivity {
 
     //read all the playlists name
     private void loadUserPlaylist(){
+        playlists = new ArrayList<String>();
+        mDatabase = FirebaseDatabase.getInstance().getReference();
         if(user!=null){
             mDatabase.child(user.name).addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override

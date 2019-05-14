@@ -11,8 +11,10 @@ import android.support.v7.view.menu.MenuBuilder;
 import android.support.v7.view.menu.MenuPopupHelper;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.SubMenu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -20,6 +22,7 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.Activity.OnlineActivity;
 import com.Activity.Playermusic;
 import com.Model.Playlist;
 import com.Model.Song;
@@ -33,6 +36,7 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 
 public class SonglistAdapter extends RecyclerView.Adapter<SonglistAdapter.ViewHoder> {
+    private static final int NEW_MENU_ITEM = Menu.FIRST;
     Context context;
     ArrayList<Song> songs;
     DownloadManager downloadManager;
@@ -70,8 +74,21 @@ public class SonglistAdapter extends RecyclerView.Adapter<SonglistAdapter.ViewHo
                 MenuBuilder menuBuilder= new MenuBuilder(context);
                 MenuInflater menuInflater=new MenuInflater(context);
                 menuInflater.inflate(R.menu.songmenu,menuBuilder);
+
                 MenuPopupHelper menuPopupHelper= new MenuPopupHelper(context,menuBuilder,viewHoder.imglike);
                 menuPopupHelper.setForceShowIcon(true);
+                int order=0;
+                SubMenu subMenu=menuBuilder.addSubMenu("Thêm vào playlist").setIcon(R.drawable.baseline_add_black_18dp);
+                if(OnlineActivity.playlists!=null) {
+                    if (OnlineActivity.playlists.size() > 0) {
+                        for (int j = 0; j < OnlineActivity.playlists.size(); j++) {
+                            subMenu.add(1, j, j, OnlineActivity.playlists.get(j)).setIcon(R.drawable.playlist);
+                        }
+                    }
+
+                        subMenu.add(1, OnlineActivity.playlists.size(),OnlineActivity.playlists.size(),"Thêm playlist" ).setIcon(R.drawable.baseline_add_black_18dp);
+                }
+
                 menuBuilder.setCallback(new MenuBuilder.Callback() {
                     @Override
                     public boolean onMenuItemSelected(MenuBuilder menu, MenuItem item) {
@@ -87,9 +104,9 @@ public class SonglistAdapter extends RecyclerView.Adapter<SonglistAdapter.ViewHo
 
                                 return true;
                             }
-                            case R.id.songmenu_addplaylist:{
-
-                            }
+//                            case R.id.songmenu_addplaylist:{
+//
+//                            }
                         }
                         return false;
                     }

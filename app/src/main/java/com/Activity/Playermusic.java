@@ -51,7 +51,7 @@ public class Playermusic extends AppCompatActivity {
     public static PlayermusicAdapter adapter;
     Fragment_disk fragment_disk;
     fragment_listmusic_player fragmentListmusicPlayer;
-    MediaPlayer mediaPlayer;
+    public static MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,9 +60,15 @@ public class Playermusic extends AppCompatActivity {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
 
-
+        if(mediaPlayer!=null) {
+            mediaPlayer.stop();
+            mediaPlayer.release();
+            mediaPlayer = null;
+            songs.clear();
+        }
         getdataintent();
         anhxa();
+
         init();
         eventclick();
 
@@ -315,8 +321,7 @@ public class Playermusic extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 finish();
-                mediaPlayer.stop();
-                songs.clear();
+
             }
         });
         toolbar.setTitleTextColor(Color.WHITE);
@@ -424,4 +429,6 @@ public class Playermusic extends AppCompatActivity {
             }
         },1000);
     }
+
+
 }

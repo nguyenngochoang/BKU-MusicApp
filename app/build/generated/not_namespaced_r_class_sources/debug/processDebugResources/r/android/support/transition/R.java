@@ -111,16 +111,16 @@ public final class R {
         public static final int save_image_matrix = 0x7f0801b2;
         public static final int save_non_transition_alpha = 0x7f0801b3;
         public static final int save_scale_type = 0x7f0801b4;
-        public static final int status_bar_latest_event_content = 0x7f0801e0;
-        public static final int text = 0x7f0801ea;
-        public static final int text2 = 0x7f0801eb;
-        public static final int time = 0x7f0801f6;
-        public static final int title = 0x7f0801f7;
-        public static final int transition_current_scene = 0x7f0801ff;
-        public static final int transition_layout_save = 0x7f080200;
-        public static final int transition_position = 0x7f080201;
-        public static final int transition_scene_layoutid_cache = 0x7f080202;
-        public static final int transition_transform = 0x7f080203;
+        public static final int status_bar_latest_event_content = 0x7f0801df;
+        public static final int text = 0x7f0801e9;
+        public static final int text2 = 0x7f0801ea;
+        public static final int time = 0x7f0801f5;
+        public static final int title = 0x7f0801f6;
+        public static final int transition_current_scene = 0x7f0801fe;
+        public static final int transition_layout_save = 0x7f0801ff;
+        public static final int transition_position = 0x7f080200;
+        public static final int transition_scene_layoutid_cache = 0x7f080201;
+        public static final int transition_transform = 0x7f080202;
     }
     public static final class integer {
         private integer() {}
