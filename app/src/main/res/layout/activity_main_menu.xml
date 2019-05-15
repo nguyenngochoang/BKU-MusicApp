@@ -33,4 +33,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+
+        android:id="@+id/activity_playlist_offline"
+        android:layout_width="198dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="200dp"
+        android:onClick="goToOffline"
+        android:text="Nhạc Offline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
 </android.support.constraint.ConstraintLayout>

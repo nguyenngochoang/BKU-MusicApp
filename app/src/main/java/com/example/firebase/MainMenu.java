@@ -15,6 +15,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.Toast;
 
+import com.Activity.OfflineActivity;
 import com.Activity.OnlineActivity;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -205,6 +206,11 @@ public class MainMenu extends AppCompatActivity {
 
     public void goToMyPlaylist(View view){
         Intent intent = new Intent(MainMenu.this,Playlist.class);
+        intent.putExtra("userInfo",user);
+        startActivity(intent);
+    }
+    public void goToOffline(View view){
+        Intent intent = new Intent(MainMenu.this, OfflineActivity.class);
         intent.putExtra("userInfo",user);
         startActivity(intent);
     }

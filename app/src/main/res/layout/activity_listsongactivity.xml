@@ -15,7 +15,7 @@
         <android.support.design.widget.CollapsingToolbarLayout
             app:expandedTitleGravity="center|bottom"
             app:expandedTitleMarginBottom="33dp"
-            android:background="@mipmap/ic_launcher"
+            android:background="@drawable/cattset"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             android:id="@+id/activity_listsongactivity_collapsingtoolbarlayout"
             android:layout_width="match_parent"

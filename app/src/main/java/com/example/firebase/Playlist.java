@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
@@ -14,6 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.Activity.Listsongactivity;
+import com.Activity.Playermusic;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -36,9 +38,10 @@ public class Playlist extends AppCompatActivity {
     String currentFolderName="";
     Button buttonChanged ;
     String newFolderName="";
+    String temp;
     DatabaseReference changeNameDB;
     Button createPlaylist;
-    List<Integer> arrayID = new ArrayList<Integer>();
+    List<String> arrayID = new ArrayList<String>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +51,7 @@ public class Playlist extends AppCompatActivity {
         user = (User) intent.getSerializableExtra("userInfo");
         mDatabase = FirebaseDatabase.getInstance().getReference();
         createPlaylist = findViewById(R.id.button5);
+
         loadPlaylist();
 
 
@@ -74,9 +78,11 @@ public class Playlist extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                temp=new String();
+//                createPlaylistOnDB(name.replaceAll("\\s+",""),name);
                 onGotoListSong(name);
                //TODO: go inside playlist to view all the songs
-                createPlaylistOnDB(name.replaceAll("\\s+",""),name);
+
 
 
             }
@@ -93,25 +99,48 @@ public class Playlist extends AppCompatActivity {
     }
 
     public void onGotoListSong(final String playlistName){
-        Intent intent = new Intent(this,Listsongactivity.class);
+
+
         mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for(DataSnapshot ds : dataSnapshot.child(user.name).child("playlist").child(playlistName).getChildren()){
-                    arrayID.add(Integer.parseInt(ds.getValue().toString()));
+
+                    if(!ds.getValue().toString().equals(playlistName))
+                        temp+=ds.getValue().toString()+" ";
+//                    Toast.makeText(Playlist.this,temp,Toast.LENGTH_LONG).show();
+
+
+//                    Toast.makeText(Playlist.this,temp,Toast.LENGTH_LONG).show();
                 }
+                makete(temp,playlistName);
+
+
+
             }
+
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
             }
+
         });
 
-        intent.putExtra("arrayID", (Serializable) arrayID);
 
+
+
+    }
+
+    private void makete(String temp,String playlisname) {
+//        Toast.makeText(this,temp,Toast.LENGTH_LONG).show();
+        Intent intent =new Intent(Playlist.this,Listsongactivity.class);
+        intent.putExtra("allId",temp);
         startActivity(intent);
     }
+
+
 
     public void createPlaylistOnDB(final String Playlistname, final String nodename){
 

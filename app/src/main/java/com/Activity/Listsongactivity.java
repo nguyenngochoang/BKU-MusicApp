@@ -59,7 +59,7 @@ public class Listsongactivity extends AppCompatActivity {
     Style style;
     Theme theme;
     Album album;
-    List<Integer>arrayID ;
+    String allid ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,13 +69,15 @@ public class Listsongactivity extends AppCompatActivity {
         anhxa();
         init();
         Dataintent();
-        arrayID = new ArrayList<Integer>();
-        Intent intent = getIntent();
-        arrayID = (ArrayList<Integer>) intent.getSerializableExtra("arrayID");
-
-        Toast.makeText(this,Long.toString(arrayID.size()),Toast.LENGTH_SHORT).show();
 
 
+
+
+        if(allid!=null && allid.length()>0)
+        {
+
+            getDatasong(allid,"allidplaylist");
+        }
         if(adverTising!=null && !adverTising.getNamesong().equals(""))
         {
             setValueInView(adverTising.getNamesong(),adverTising.getImagesong());
@@ -139,8 +141,10 @@ public class Listsongactivity extends AppCompatActivity {
         {
             callback= dataService.GetSongtheme(id);
         }
-        else
+        else if(type.equals("album"))
             callback= dataService.GetSongalbum(id);
+        else
+            callback=dataService.GetSongwithid(id);
         callback.enqueue(new Callback<List<Song>>() {
             @Override
             public void onResponse(Call<List<Song>> call, Response<List<Song>> response) {
@@ -200,6 +204,10 @@ public class Listsongactivity extends AppCompatActivity {
 
     private void Dataintent(){
         Intent intent=getIntent();
+        if(intent!=null && intent.hasExtra("allId")) {
+            allid =  (String)intent.getStringExtra("allId");
+            Toast.makeText(this, allid , Toast.LENGTH_SHORT).show();
+        }
         if(intent!=null && intent.hasExtra("Banner"))
         {
             adverTising= (AdverTising) intent.getSerializableExtra("Banner");

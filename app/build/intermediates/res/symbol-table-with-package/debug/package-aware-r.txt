@@ -956,6 +956,7 @@ drawable baseline_add_black_18dp
 drawable baseline_arrow_downward_black_18dp
 drawable bug
 drawable button
+drawable cattset
 drawable chat
 drawable color_cursor_white
 drawable common_full_open_on_phone
@@ -1099,6 +1100,7 @@ id activity_listsongactivity_toolbarlist
 id activity_offline_appbar
 id activity_offline_recycler
 id activity_offline_toolbar
+id activity_playlist_offline
 id activity_playmusic_curtime
 id activity_playmusic_next
 id activity_playmusic_play
