@@ -115,10 +115,10 @@ public final class R {
         public static final int notification_main_column_container = 0x7f080165;
         public static final int right_icon = 0x7f0801b0;
         public static final int right_side = 0x7f0801b1;
-        public static final int text = 0x7f0801e9;
-        public static final int text2 = 0x7f0801ea;
-        public static final int time = 0x7f0801f5;
-        public static final int title = 0x7f0801f6;
+        public static final int text = 0x7f0801ea;
+        public static final int text2 = 0x7f0801eb;
+        public static final int time = 0x7f0801f6;
+        public static final int title = 0x7f0801f7;
     }
     public static final class integer {
         private integer() {}

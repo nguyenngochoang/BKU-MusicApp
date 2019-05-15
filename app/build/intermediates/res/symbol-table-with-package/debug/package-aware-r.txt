@@ -1517,6 +1517,7 @@ id snackbar_action
 id snackbar_text
 id snap
 id songmenu_download
+id songmenu_groupplaylist
 id spacer
 id split_action_bar
 id spread

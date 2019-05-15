@@ -26,7 +26,7 @@ import java.util.List;
 public class OnlineActivity extends AppCompatActivity {
     TabLayout maintablayout;
     ViewPager mainviewpager;
-    User user;
+    public static User user;
     public static List<String> playlists;
     DatabaseReference mDatabase;
     @Override

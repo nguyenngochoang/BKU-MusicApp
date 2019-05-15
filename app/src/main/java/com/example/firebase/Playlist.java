@@ -11,12 +11,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
+import com.Activity.Listsongactivity;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 import static android.text.InputType.TYPE_CLASS_TEXT;
 import static android.text.InputType.TYPE_TEXT_VARIATION_NORMAL;
@@ -32,6 +38,7 @@ public class Playlist extends AppCompatActivity {
     String newFolderName="";
     DatabaseReference changeNameDB;
     Button createPlaylist;
+    List<Integer> arrayID = new ArrayList<Integer>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,7 +74,7 @@ public class Playlist extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                onGotoListSong(name);
                //TODO: go inside playlist to view all the songs
                 createPlaylistOnDB(name.replaceAll("\\s+",""),name);
 
@@ -83,6 +90,27 @@ public class Playlist extends AppCompatActivity {
                 return true;
             }
         });
+    }
+
+    public void onGotoListSong(final String playlistName){
+        Intent intent = new Intent(this,Listsongactivity.class);
+        mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for(DataSnapshot ds : dataSnapshot.child(user.name).child("playlist").child(playlistName).getChildren()){
+                    arrayID.add(Integer.parseInt(ds.getValue().toString()));
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+        intent.putExtra("arrayID", (Serializable) arrayID);
+
+        startActivity(intent);
     }
 
     public void createPlaylistOnDB(final String Playlistname, final String nodename){
@@ -213,7 +241,22 @@ public class Playlist extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 m_Text = input.getText().toString();
-                createButton(m_Text);
+                mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        if(!dataSnapshot.child(user.name).child("playlist").hasChild(m_Text)){
+                                createButton(m_Text);
+                        }
+                        else{
+                            Toast.makeText(Playlist.this,"Playlist đã tồn tại",Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
             }
         });
         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {

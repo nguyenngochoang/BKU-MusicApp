@@ -59,6 +59,7 @@ public class Listsongactivity extends AppCompatActivity {
     Style style;
     Theme theme;
     Album album;
+    List<Integer>arrayID ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,6 +69,12 @@ public class Listsongactivity extends AppCompatActivity {
         anhxa();
         init();
         Dataintent();
+        arrayID = new ArrayList<Integer>();
+        Intent intent = getIntent();
+        arrayID = (ArrayList<Integer>) intent.getSerializableExtra("arrayID");
+
+        Toast.makeText(this,Long.toString(arrayID.size()),Toast.LENGTH_SHORT).show();
+
 
         if(adverTising!=null && !adverTising.getNamesong().equals(""))
         {
