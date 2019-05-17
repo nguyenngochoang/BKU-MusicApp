@@ -40,6 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="80dp"
+            android:background="@drawable/button"
             android:onClick="goToMyPlaylist"
             android:text="@string/myplaylist" />
 
@@ -50,6 +51,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
+            android:background="@drawable/button"
             android:onClick="goToOffline"
             android:text="Nhạc Offline" />
 
