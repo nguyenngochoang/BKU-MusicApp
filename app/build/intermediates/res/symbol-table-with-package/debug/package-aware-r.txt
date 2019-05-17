@@ -258,6 +258,38 @@ attr fastScrollHorizontalThumbDrawable
 attr fastScrollHorizontalTrackDrawable
 attr fastScrollVerticalThumbDrawable
 attr fastScrollVerticalTrackDrawable
+attr fb_borderColor
+attr fb_borderWidth
+attr fb_defaultColor
+attr fb_disabledBorderColor
+attr fb_disabledColor
+attr fb_disabledTextColor
+attr fb_focusColor
+attr fb_fontIconResource
+attr fb_fontIconSize
+attr fb_ghost
+attr fb_iconColor
+attr fb_iconFont
+attr fb_iconPaddingBottom
+attr fb_iconPaddingLeft
+attr fb_iconPaddingRight
+attr fb_iconPaddingTop
+attr fb_iconPosition
+attr fb_iconResource
+attr fb_radius
+attr fb_radiusBottomLeft
+attr fb_radiusBottomRight
+attr fb_radiusTopLeft
+attr fb_radiusTopRight
+attr fb_text
+attr fb_textAllCaps
+attr fb_textColor
+attr fb_textFont
+attr fb_textFontRes
+attr fb_textGravity
+attr fb_textPosition
+attr fb_textSize
+attr fb_useSystemFont
 attr font
 attr fontFamily
 attr fontProviderAuthority
@@ -625,6 +657,7 @@ color foreground_material_dark
 color foreground_material_light
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color ic_launcher_background
 color material_blue_grey_800
 color material_blue_grey_900
 color material_blue_grey_950
@@ -952,6 +985,7 @@ drawable album
 drawable avatar
 drawable avd_hide_password
 drawable avd_show_password
+drawable background
 drawable baseline_add_black_18dp
 drawable baseline_arrow_downward_black_18dp
 drawable bug
@@ -1022,6 +1056,7 @@ drawable iconsuffle
 drawable iconsyned
 drawable icontimkiem
 drawable icontrangchu
+drawable logo
 drawable mp3filelocal
 drawable navigation_empty_icon
 drawable notification_action_background
@@ -1347,6 +1382,7 @@ id icon_group
 id icon_only
 id ifRoom
 id image
+id imageView
 id inBack
 id inBounce
 id inCirc
@@ -1383,6 +1419,7 @@ id linear
 id linearLayout
 id linearLayout2
 id linearLayout3
+id linearLayout4
 id list
 id listMode
 id list_item
@@ -1548,6 +1585,7 @@ id textSpacerNoTitle
 id textView
 id textView2
 id textView3
+id textView4
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
@@ -1714,6 +1752,7 @@ menu menu_user_information
 menu reseachmenu
 menu songmenu
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 string I_email
 string I_userName
@@ -2282,6 +2321,7 @@ styleable CoordinatorLayout keylines statusBarBackground
 styleable CoordinatorLayout_Layout android_layout_gravity layout_anchor layout_anchorGravity layout_behavior layout_dodgeInsetEdges layout_insetEdge layout_keyline
 styleable DesignTheme bottomSheetDialogTheme bottomSheetStyle textColorError
 styleable DrawerArrowToggle arrowHeadLength arrowShaftLength barLength color drawableSize gapBetweenBars spinBars thickness
+styleable FancyButtonsAttrs android_enabled android_textSize android_textStyle android_text android_textAllCaps android_fontFamily fb_borderColor fb_borderWidth fb_defaultColor fb_disabledBorderColor fb_disabledColor fb_disabledTextColor fb_focusColor fb_fontIconResource fb_fontIconSize fb_ghost fb_iconColor fb_iconFont fb_iconPaddingBottom fb_iconPaddingLeft fb_iconPaddingRight fb_iconPaddingTop fb_iconPosition fb_iconResource fb_radius fb_radiusBottomLeft fb_radiusBottomRight fb_radiusTopLeft fb_radiusTopRight fb_text fb_textAllCaps fb_textColor fb_textFont fb_textFontRes fb_textGravity fb_textPosition fb_textSize fb_useSystemFont
 styleable FloatingActionButton backgroundTint backgroundTintMode borderWidth elevation fabSize pressedTranslationZ rippleColor useCompatPadding
 styleable FloatingActionButton_Behavior_Layout behavior_autoHide
 styleable FontFamily fontProviderAuthority fontProviderCerts fontProviderFetchStrategy fontProviderFetchTimeout fontProviderPackage fontProviderQuery

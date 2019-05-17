@@ -7,44 +7,68 @@
     tools:context=".MainMenu">
 
 
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="169dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="172dp"
+            app:srcCompat="@drawable/background" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="198dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="80dp"
+            android:onClick="goToMyPlaylist"
+            android:text="@string/myplaylist" />
+
+        <Button
+
+            android:id="@+id/activity_playlist_offline"
+            android:layout_width="198dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:onClick="goToOffline"
+            android:text="Nhạc Offline" />
+
+    </LinearLayout>
+
     <com.nightonke.boommenu.BoomMenuButton
         android:id="@+id/bmb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="21dp"
         android:visibility="visible"
         app:bmb_buttonEnum="ham"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
     </com.nightonke.boommenu.BoomMenuButton>
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="198dp"
-        android:layout_height="37dp"
-        android:layout_marginTop="31dp"
-        android:onClick="goToMyPlaylist"
-        android:text="@string/myplaylist"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-
-        android:id="@+id/activity_playlist_offline"
-        android:layout_width="198dp"
-        android:layout_height="37dp"
-        android:layout_marginTop="200dp"
-        android:onClick="goToOffline"
-        android:text="Nhạc Offline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>
