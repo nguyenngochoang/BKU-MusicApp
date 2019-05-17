@@ -33,6 +33,7 @@ import com.Model.Theme;
 import com.Service.APIservice;
 import com.Service.DataService;
 import com.example.firebase.R;
+import com.example.firebase.User;
 import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
@@ -46,6 +47,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class Listsongactivity extends AppCompatActivity {
+    public static User user;
     CoordinatorLayout coordinatorLayout;
     CollapsingToolbarLayout collapsingToolbarLayout;
     Toolbar toolbar;
@@ -66,10 +68,16 @@ public class Listsongactivity extends AppCompatActivity {
         setContentView(R.layout.activity_listsongactivity);
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
+        Intent intent=getIntent();
+        if(intent!=null && intent.hasExtra("user"))
+        {
+            user=(User)intent.getSerializableExtra("user");
+            if(user!=null)
+                Toast.makeText(this, "cc" , Toast.LENGTH_SHORT).show();
+        }
         anhxa();
         init();
         Dataintent();
-
 
 
 
@@ -204,9 +212,10 @@ public class Listsongactivity extends AppCompatActivity {
 
     private void Dataintent(){
         Intent intent=getIntent();
+
         if(intent!=null && intent.hasExtra("allId")) {
             allid =  (String)intent.getStringExtra("allId");
-            Toast.makeText(this, allid , Toast.LENGTH_SHORT).show();
+
         }
         if(intent!=null && intent.hasExtra("Banner"))
         {

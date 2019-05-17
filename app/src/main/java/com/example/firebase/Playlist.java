@@ -137,6 +137,7 @@ public class Playlist extends AppCompatActivity {
 //        Toast.makeText(this,temp,Toast.LENGTH_LONG).show();
         Intent intent =new Intent(Playlist.this,Listsongactivity.class);
         intent.putExtra("allId",temp);
+        intent.putExtra("user",user);
         startActivity(intent);
     }
 
@@ -275,6 +276,7 @@ public class Playlist extends AppCompatActivity {
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         if(!dataSnapshot.child(user.name).child("playlist").hasChild(m_Text)){
                                 createButton(m_Text);
+                                createPlaylistOnDB(m_Text.replaceAll("\\s+",""),m_Text);
                         }
                         else{
                             Toast.makeText(Playlist.this,"Playlist đã tồn tại",Toast.LENGTH_SHORT).show();

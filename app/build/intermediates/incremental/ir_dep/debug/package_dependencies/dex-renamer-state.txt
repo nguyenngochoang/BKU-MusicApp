@@ -1,4 +1,4 @@
-#Fri May 17 12:43:55 ICT 2019
-base.0=/home/hoang/Desktop/BKU-MusicApp/app/build/intermediates/transforms/dexMerger/debug/10
+#Fri May 17 23:55:26 ICT 2019
+base.0=C\:\\Users\\SilverP\\Desktop\\BKU-MusicApp\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10
 path.0=classes.dex
 renamed.0=classes.dex
