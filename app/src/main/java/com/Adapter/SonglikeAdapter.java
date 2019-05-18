@@ -11,6 +11,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.view.menu.MenuBuilder;
 import android.support.v7.view.menu.MenuPopupHelper;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MenuInflater;
@@ -57,11 +58,14 @@ public class SonglikeAdapter extends RecyclerView.Adapter<SonglikeAdapter.ViewHo
     DownloadManager downloadManager;
     User user=OnlineActivity.user;
     String m_Text = "";
+    ArrayList<String> playlists;
     DatabaseReference mDatabase;
 
     public SonglikeAdapter(Context context, ArrayList<Song> songs) {
         this.context = context;
         this.songs = songs;
+        loadUserPlaylist();
+
     }
 
     @NonNull
@@ -69,7 +73,7 @@ public class SonglikeAdapter extends RecyclerView.Adapter<SonglikeAdapter.ViewHo
     public ViewHoder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         LayoutInflater layoutInflater=LayoutInflater.from(context);
         View view= layoutInflater.inflate(R.layout.dong_songlike,viewGroup,false);
-        mDatabase = FirebaseDatabase.getInstance().getReference();
+
 
         return new ViewHoder(view);
     }
@@ -91,15 +95,15 @@ public class SonglikeAdapter extends RecyclerView.Adapter<SonglikeAdapter.ViewHo
                 menuPopupHelper.setForceShowIcon(true);
                 int order=0;
                 SubMenu subMenu=menuBuilder.addSubMenu(R.id.songmenu_groupplaylist,10000,1,"Thêm vào playlist").setIcon(R.drawable.baseline_add_black_18dp);
-                if(OnlineActivity.playlists!=null) {
-                    if (OnlineActivity.playlists.size() > 0) {
-                        for (int j = 0; j < OnlineActivity.playlists.size(); j++) {
-                            subMenu.add(1, j, j, OnlineActivity.playlists.get(j)).setIcon(R.drawable.playlist);
+                if(playlists!=null) {
+                    if (playlists.size() > 0) {
+                        for (int j = 0; j < playlists.size(); j++) {
+                            subMenu.add(1, j, j, playlists.get(j)).setIcon(R.drawable.playlist);
 
                         }
                     }
 
-                    subMenu.add(1, OnlineActivity.playlists.size(),OnlineActivity.playlists.size(),"Thêm playlist" ).setIcon(R.drawable.baseline_add_black_18dp);
+                    subMenu.add(1, playlists.size(),playlists.size(),"Thêm playlist" ).setIcon(R.drawable.baseline_add_black_18dp);
 
 
 
@@ -107,34 +111,33 @@ public class SonglikeAdapter extends RecyclerView.Adapter<SonglikeAdapter.ViewHo
                 menuBuilder.setCallback(new MenuBuilder.Callback() {
                     @Override
                     public boolean onMenuItemSelected(MenuBuilder menu, MenuItem item) {
-                        if(item.getItemId()>=0 && item.getItemId()<OnlineActivity.playlists.size())
-                        {
-                            final String playlistname = OnlineActivity.playlists.get(item.getItemId());
-                            final String songid = songs.get(i).getIdsong();
-                            mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
-                                @Override
-                                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                    if(!dataSnapshot.child(OnlineActivity.user.name).child("playlist").child(playlistname).hasChild(songid)){
-                                        mDatabase.child(OnlineActivity.user.name).child("playlist").child(playlistname).child(songid).setValue(songid);
-                                        Toast.makeText(context,"Bạn đã thêm bài hát này vào playlist "+playlistname,Toast.LENGTH_SHORT).show();
+                        if(playlists!=null) {
+                            if (item.getItemId() >= 0 && item.getItemId() < playlists.size()) {
+                                final String playlistname = playlists.get(item.getItemId());
+                                final String songid = songs.get(i).getIdsong();
+                                mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+                                    @Override
+                                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                        if (!dataSnapshot.child(user.name).child("playlist").child(playlistname).hasChild(songid)) {
+                                            mDatabase.child(user.name).child("playlist").child(playlistname).child(songid).setValue(songid);
+                                            Toast.makeText(context, "Bạn đã thêm bài hát này vào playlist " + playlistname, Toast.LENGTH_SHORT).show();
+                                        } else {
+                                            Toast.makeText(context, "Bài hát đã tồn tại", Toast.LENGTH_SHORT).show();
+                                        }
                                     }
-                                    else{
-                                        Toast.makeText(context,"Bài hát đã tồn tại",Toast.LENGTH_SHORT).show();
+
+                                    @Override
+                                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
                                     }
-                                }
-
-                                @Override
-                                public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                                }
-                            });
-                            return true;
-                        }
-                        int addsubmenu=OnlineActivity.playlists.size();
-                        if(item.getItemId()==addsubmenu)
-                        {
-                            createNewFolder();
-                            return true;
+                                });
+                                return true;
+                            }
+                            int addsubmenu = playlists.size();
+                            if (item.getItemId() == addsubmenu) {
+                                createNewFolder();
+                                return true;
+                            }
                         }
                         switch (item.getItemId()) {
                             case R.id.songmenu_download:{
@@ -217,10 +220,10 @@ public class SonglikeAdapter extends RecyclerView.Adapter<SonglikeAdapter.ViewHo
                 mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        if(!dataSnapshot.child(OnlineActivity.user.name).child("playlist").hasChild(m_Text)){
+                        if(!dataSnapshot.child(user.name).child("playlist").hasChild(m_Text)){
                             createButton(m_Text);
                             Toast.makeText(context,"Ban đã tạo playlist "+m_Text,Toast.LENGTH_SHORT).show();
-                            OnlineActivity.playlists.add(m_Text);
+                            playlists.add(m_Text);
                             notifyDataSetChanged();
                         }
                         else{
@@ -284,6 +287,30 @@ public class SonglikeAdapter extends RecyclerView.Adapter<SonglikeAdapter.ViewHo
         });
 
 
+    }
+    private void loadUserPlaylist(){
+
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+        if(user!=null){
+            playlists = new ArrayList<String>();
+            mDatabase.child(user.name).addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if(dataSnapshot.hasChild("playlist")){
+                        for(DataSnapshot ds : dataSnapshot.child("playlist").getChildren()){
+                            String name = ds.child("name").getValue().toString();
+                            playlists.add(name);
+                            Log.w("testing",name);
+                        }
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+        }
     }
 
 }
