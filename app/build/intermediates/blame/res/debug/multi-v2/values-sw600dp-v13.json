@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\SilverP\\Desktop\\BKU-MusicApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+            "outputFile": "/home/hoang/BKU-MusicApp/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\SilverP\\.gradle\\caches\\transforms-2\\files-2.1\\973df432092feaca241744c09b3e23cf\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "source": "/home/hoang/.gradle/caches/transforms-2/files-2.1/479216cd3003f046b83b1c6dfb19ea0f/res/values-sw600dp-v13/values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\SilverP\\.gradle\\caches\\transforms-2\\files-2.1\\50888bac81d065a0b8ae99464170ec9c\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "source": "/home/hoang/.gradle/caches/transforms-2/files-2.1/a934f9f6ee7cbb8c72a1f3824926e9ad/res/values-sw600dp-v13/values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",

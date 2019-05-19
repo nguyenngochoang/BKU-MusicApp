@@ -1,20 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\SilverP\\Desktop\\BKU-MusicApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
+            "outputFile": "/home/hoang/BKU-MusicApp/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\SilverP\\.gradle\\caches\\transforms-2\\files-2.1\\077cb4c7c0e4e11b68a9c6443be47fed\\res\\values-v16\\values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\SilverP\\.gradle\\caches\\transforms-2\\files-2.1\\973df432092feaca241744c09b3e23cf\\res\\values-v16\\values-v16.xml",
+                    "source": "/home/hoang/.gradle/caches/transforms-2/files-2.1/479216cd3003f046b83b1c6dfb19ea0f/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -30,6 +20,16 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "/home/hoang/.gradle/caches/transforms-2/files-2.1/3737143b7d160566e086d36745749520/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
                     }
                 }
             ]

@@ -1,18 +1,23 @@
 package com.example.firebase;
 
 
+import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v4.widget.CompoundButtonCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import android.util.Log;
 import android.view.View;
 
 import com.google.firebase.database.DataSnapshot;
@@ -148,13 +153,24 @@ public class MainActivity extends AppCompatActivity {
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     if(dataSnapshot.hasChild(userName)){
                         User user = dataSnapshot.child(userName).getValue(User.class);
+                        String checkBlock = "false";
+                        if(dataSnapshot.child(userName).hasChild("isBlocked")){
+                            checkBlock = dataSnapshot.child(userName).child("isBlocked").getValue().toString();
 
+                        }
                         if(user!=null && !pass.isEmpty()){
-                            if(user.password.equals(pass)){
 
-                                  goToMainMenu(user);
+                            if(user.password.equals(pass)){
+                                if(!checkBlock.equals("true")){
+                                    goToMainMenu(user);
+                                }
+                                else{
+                                   blockedAlert();
+                                }
+
                             }
                         }
+
 
                     }
 
@@ -209,11 +225,21 @@ public class MainActivity extends AppCompatActivity {
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     if (dataSnapshot.hasChild(nameV)) {
                         User user = dataSnapshot.child(nameV).getValue(User.class);
+                        String checkBlock = "false";
+                        if(dataSnapshot.child(nameV).hasChild("isBlocked")){
+                            checkBlock = dataSnapshot.child(nameV).child("isBlocked").getValue().toString();
+
+                        }
 
                         if (user.password.equals(passValue)) {
-                            saveAutoLogin(nameV, user.password);
-//                            goToInfoPage(user);
-                            goToMainMenu(user);
+                            if(!checkBlock.equals("true")){
+                                saveAutoLogin(nameV, user.password);
+                                    goToMainMenu(user);
+
+                            }
+                            else{
+                                blockedAlert();
+                            }
 
                         } else {
                             alert = new Alert(1, getString(R.string.wrongInfo), MainActivity.this, "", "");
@@ -243,6 +269,36 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void blockedAlert(){
+        AlertDialog.Builder adb = new AlertDialog.Builder(MainActivity.this);
 
+
+        adb.setMessage("Tài khoản của bạn đã bị khoá, bạn có muốn liên hệ với admin không?");
+        adb.setTitle("Lỗi");
+        adb.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                contactAdmin();
+
+            }
+        });
+        adb.setNegativeButton("Cancel", new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+            }
+        });
+        AlertDialog ad = adb.create();
+        ad.show();
+    }
+
+    public void contactAdmin(){
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:nngochoangnguyen@gmail.com"));
+        intent.putExtra(Intent.EXTRA_EMAIL  , new String[] { "" });
+        intent.putExtra(Intent.EXTRA_SUBJECT, "My account is blocked");
+
+        startActivity(Intent.createChooser(intent, "Choose one ..."));
+
+    }
 
 }

@@ -65,79 +65,70 @@ public class MainMenu extends AppCompatActivity {
 
         //---------------- create menu -------------------
         BoomMenuButton bmb = findViewById(R.id.bmb);
-        bmb.setButtonEnum(ButtonEnum.Ham);
-        bmb.setPiecePlaceEnum(PiecePlaceEnum.HAM_5);
-        bmb.setButtonPlaceEnum(ButtonPlaceEnum.HAM_5);
+        if(user.role.equals("admin")){
+            bmb.setButtonEnum(ButtonEnum.Ham);
+            bmb.setPiecePlaceEnum(PiecePlaceEnum.HAM_4);
+            bmb.setButtonPlaceEnum(ButtonPlaceEnum.HAM_4);
+            HamButton.Builder builder5 = new HamButton.Builder()
+                    .listener(new OnBMClickListener() {
+                        @Override
+                        public void onBoomButtonClick(int index) {
+                            onGotoAdminPage();
+                        }
+                    })
+                    .normalImageDrawable(getResources().getDrawable(R.drawable.admin))
+                    .normalTextRes(R.string.admin);
+
+            bmb.addBuilder(builder5);
+        }
+        else{
+            bmb.setButtonEnum(ButtonEnum.Ham);
+            bmb.setPiecePlaceEnum(PiecePlaceEnum.HAM_3);
+            bmb.setButtonPlaceEnum(ButtonPlaceEnum.HAM_3);
+        }
+            HamButton.Builder builder1 = new HamButton.Builder()
+                    .listener(new OnBMClickListener() {
+                        @Override
+                        public void onBoomButtonClick(int index) {
+                            goToInfoPage(user);
+                        }
+                    })
+                    .normalImageDrawable(getResources().getDrawable(R.drawable.user))
+                    .normalTextRes(R.string.userInfo);
+
+            bmb.addBuilder(builder1);
+
+            HamButton.Builder builder3 = new HamButton.Builder()
+                    .listener(new OnBMClickListener() {
+                        @Override
+                        public void onBoomButtonClick(int index) {
+                            ongotoOnlineMusic();
+                        }
+                    })
+                    .normalImageDrawable(getResources().getDrawable(R.drawable.playlist))
+                    .normalTextRes(R.string.onlinemusic);
+
+            bmb.addBuilder(builder3);
+
+            HamButton.Builder builder4 = new HamButton.Builder()
+                    .listener(new OnBMClickListener() {
+                        @Override
+                        public void onBoomButtonClick(int index) {
+                            sendFeedback();
+                        }
+                    })
+                    .normalImageDrawable(getResources().getDrawable(R.drawable.bug))
+                    .normalTextRes(R.string.feedback);
+
+            bmb.addBuilder(builder4);
+
+            //-------------------- end of adding and styling buttons ---------------------------------
+
+
+
         //---------------- end of create menu ------------
 
-        //-------------------- below codes are for adding and styling buttons one by one --------------
-        HamButton.Builder builder1 = new HamButton.Builder()
-              .listener(new OnBMClickListener() {
-                  @Override
-                  public void onBoomButtonClick(int index) {
-                        goToInfoPage(user);
-                  }
-              })
-                .normalImageDrawable(getResources().getDrawable(R.drawable.user))
-                .normalTextRes(R.string.userInfo);
 
-        bmb.addBuilder(builder1);
-
-        HamButton.Builder builder2 = new HamButton.Builder()
-                .listener(new OnBMClickListener() {
-                    @Override
-                    public void onBoomButtonClick(int index) {
-
-                    }
-                })
-                .normalImageDrawable(getResources().getDrawable(R.drawable.album))
-                .normalTextRes(R.string.showAlbum);
-
-        bmb.addBuilder(builder2);
-
-        HamButton.Builder builder3 = new HamButton.Builder()
-                .listener(new OnBMClickListener() {
-                    @Override
-                    public void onBoomButtonClick(int index) {
-                        ongotoOnlineMusic();
-                    }
-                })
-                .normalImageDrawable(getResources().getDrawable(R.drawable.playlist))
-                .normalTextRes(R.string.onlinemusic);
-
-        bmb.addBuilder(builder3);
-
-        HamButton.Builder builder4 = new HamButton.Builder()
-                .listener(new OnBMClickListener() {
-                    @Override
-                    public void onBoomButtonClick(int index) {
-                        sendFeedback();
-                    }
-                })
-                .normalImageDrawable(getResources().getDrawable(R.drawable.bug))
-                .normalTextRes(R.string.feedback);
-
-        bmb.addBuilder(builder4);
-
-        //-------------------- end of adding and styling buttons ---------------------------------
-
-        // ------------ if user are admin, they will have this option ----------------------------
-
-            if(user.role.equals("admin")){
-                HamButton.Builder builder5 = new HamButton.Builder()
-                        .listener(new OnBMClickListener() {
-                            @Override
-                            public void onBoomButtonClick(int index) {
-                                onGotoAdminPage();
-                            }
-                        })
-                        .normalImageDrawable(getResources().getDrawable(R.drawable.admin))
-                        .normalTextRes(R.string.admin);
-
-                bmb.addBuilder(builder5);
-            }
-
-        // ------------- end of admin ------------------------------------------------------------
 
     }
 

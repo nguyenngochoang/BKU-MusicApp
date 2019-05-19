@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
 ;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.HorizontalScrollView;
@@ -46,7 +47,7 @@ public class AdminActivity extends AppCompatActivity {
         rowCount =intent.getLongExtra("rowCount",1L);
 
         String[] column = { "Tên người dùng", "Email", "Ngày sinh",
-                "Giới tính", "Loại tài khoản","Chỉnh sửa","Xoá",
+                "Giới tính", "Loại tài khoản","Khoá"
         };
 
         int cl=column.length;
@@ -66,7 +67,7 @@ public class AdminActivity extends AppCompatActivity {
 
 
 
-    public TableLayout loadUserList(ArrayList<User> row, String [] cv, int columnCount){
+    public TableLayout loadUserList(final ArrayList<User> row, String [] cv, int columnCount){
 
         // 1) Create a tableLayout and its params
         TableLayout.LayoutParams tableLayoutParams = new TableLayout.LayoutParams();
@@ -94,6 +95,7 @@ public class AdminActivity extends AppCompatActivity {
                 editText.setBackgroundColor(Color.TRANSPARENT);
                 editText.setGravity(Gravity.CENTER);
                 editText.setEnabled(false);
+                editText.setTag(Integer.toString(i)+j);
 
                 //  textView.setText(String.valueOf(j));
                 textView.setBackgroundColor(Color.WHITE);
@@ -146,18 +148,38 @@ public class AdminActivity extends AppCompatActivity {
                             break;
 
                         case 6:
-                            Button btn=new Button(this);
-                            btn.setId(1);
-                            btn.setText("Ban");
+                            final Button btn=new Button(this);
+                            btn.setTag(1);
+                            final int temp = i;
+                            mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                    if(dataSnapshot.child(row.get(temp).name).hasChild("isBlocked")){
+                                        if(dataSnapshot.child(row.get(temp).name).child("isBlocked").getValue().toString().equals("true")){
+                                            btn.setText("Mở khoá");
+                                        }
+                                        else{
+                                            btn.setText("Khoá");
+                                        }
+                                    }
+                                    else{
+                                        btn.setText("Khoá");
+                                    }
+                                }
+
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                                }
+                            });
                             btn.setLayoutParams(new TableLayout.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,TableRow.LayoutParams.WRAP_CONTENT));
                             tableRow.addView(btn, tableRowParams);
-                            break;
-                        case 7:
-                            Button btn2=new Button(this);
-                            btn2.setId(2);
-                            btn2.setText("Change");
-                            btn2.setLayoutParams(new TableLayout.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,TableRow.LayoutParams.WRAP_CONTENT));
-                            tableRow.addView(btn2, tableRowParams);
+                            btn.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    ban(row.get(temp),btn);
+                                }
+                            });
                             break;
                         default:
                             break;
@@ -180,5 +202,29 @@ public class AdminActivity extends AppCompatActivity {
 
     }
 
+    public void ban(final User user, final Button button){
+        mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for(DataSnapshot ds : dataSnapshot.getChildren()){
+                    if(ds.getKey().toString().equals(user.name)){
+                        if(button.getText().toString().equals("Khoá")){
+                            mDatabase.child(user.name).child("isBlocked").setValue("true");
+                            button.setText("Mở khoá");
+                        }
+                        else{
+                            mDatabase.child(user.name).child("isBlocked").setValue("false");
+                            button.setText("Khoá");
+                        }
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+    }
 
 }

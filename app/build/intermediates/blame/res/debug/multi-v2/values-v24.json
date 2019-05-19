@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\SilverP\\Desktop\\BKU-MusicApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
+            "outputFile": "/home/hoang/BKU-MusicApp/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\SilverP\\.gradle\\caches\\transforms-2\\files-2.1\\973df432092feaca241744c09b3e23cf\\res\\values-v24\\values-v24.xml",
+                    "source": "/home/hoang/.gradle/caches/transforms-2/files-2.1/479216cd3003f046b83b1c6dfb19ea0f/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\SilverP\\.gradle\\caches\\transforms-2\\files-2.1\\01ea65fd452c977b5d4ca7e234297616\\res\\values-v24\\values-v24.xml",
+                    "source": "/home/hoang/.gradle/caches/transforms-2/files-2.1/95ca1f1c2e63354c19a64e9c58b7a265/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

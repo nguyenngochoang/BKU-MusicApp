@@ -109,16 +109,16 @@ public final class R {
         public static final int item_touch_helper_previous_elevation = 0x7f080144;
         public static final int line1 = 0x7f08014a;
         public static final int line3 = 0x7f08014b;
-        public static final int normal = 0x7f080165;
-        public static final int notification_background = 0x7f080166;
-        public static final int notification_main_column = 0x7f080167;
-        public static final int notification_main_column_container = 0x7f080168;
-        public static final int right_icon = 0x7f0801b3;
-        public static final int right_side = 0x7f0801b4;
-        public static final int text = 0x7f0801ec;
-        public static final int text2 = 0x7f0801ed;
-        public static final int time = 0x7f0801f9;
-        public static final int title = 0x7f0801fa;
+        public static final int normal = 0x7f080164;
+        public static final int notification_background = 0x7f080165;
+        public static final int notification_main_column = 0x7f080166;
+        public static final int notification_main_column_container = 0x7f080167;
+        public static final int right_icon = 0x7f0801b2;
+        public static final int right_side = 0x7f0801b3;
+        public static final int text = 0x7f0801eb;
+        public static final int text2 = 0x7f0801ec;
+        public static final int time = 0x7f0801f8;
+        public static final int title = 0x7f0801f9;
     }
     public static final class integer {
         private integer() {}

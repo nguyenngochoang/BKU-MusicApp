@@ -1420,7 +1420,6 @@ id linearLayout
 id linearLayout2
 id linearLayout3
 id linearLayout4
-id list
 id listMode
 id list_item
 id login_form
