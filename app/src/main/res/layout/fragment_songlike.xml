@@ -15,7 +15,7 @@
             android:textSize="20sp"
             android:textColor="#3b3e3d"
             android:textStyle="bold"
-            android:text="Có thể bạn thích"
+            android:text="@string/maybeyoulike"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 

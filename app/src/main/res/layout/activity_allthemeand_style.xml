@@ -14,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"></android.support.v7.widget.Toolbar>
         <TextView
-            android:text="Tất cả chủ đề"
+            android:text="@string/alltheme"
             android:textSize="20sp"
             android:textStyle="bold|italic"
             android:layout_margin="10dp"
@@ -28,7 +28,7 @@
             android:id="@+id/activity_allthemeand_style_themerecyclerview"
             android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
         <TextView
-            android:text="Tất cả thể loại"
+            android:text="@string/allstyle"
             android:textSize="20sp"
             android:textStyle="bold|italic"
             android:layout_margin="10dp"

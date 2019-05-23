@@ -53,8 +53,8 @@ public class OnlineActivity extends AppCompatActivity {
     }
     private void init(){
         Adapter_main_home_seach adapter_main_home_seach=new Adapter_main_home_seach(getSupportFragmentManager());
-        adapter_main_home_seach.addfragment(new Fragment_home_page(),"Trang chủ");
-        adapter_main_home_seach.addfragment(new Fragment_seach(),"Tìm kiếm");
+        adapter_main_home_seach.addfragment(new Fragment_home_page(),getResources().getString(R.string.homepage));
+        adapter_main_home_seach.addfragment(new Fragment_seach(),getResources().getString(R.string.searchfrag));
         mainviewpager.setAdapter(adapter_main_home_seach);
         maintablayout.setupWithViewPager(mainviewpager);
         maintablayout.getTabAt(0).setIcon(R.drawable.icontrangchu);

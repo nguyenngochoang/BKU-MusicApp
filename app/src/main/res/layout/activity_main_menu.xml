@@ -53,7 +53,7 @@
             android:layout_marginTop="50dp"
             android:background="@drawable/button"
             android:onClick="goToOffline"
-            android:text="Nhạc Offline" />
+            android:text="@string/off_music" />
 
     </LinearLayout>
 

@@ -107,7 +107,7 @@ public class SonglistAdapter extends RecyclerView.Adapter<SonglistAdapter.ViewHo
                 MenuPopupHelper menuPopupHelper= new MenuPopupHelper(context,menuBuilder,viewHoder.imglike);
                 menuPopupHelper.setForceShowIcon(true);
                 int order=0;
-                SubMenu subMenu=menuBuilder.addSubMenu(R.id.songmenu_groupplaylist,10000,1,"Thêm vào playlist").setIcon(R.drawable.baseline_add_black_18dp);
+                SubMenu subMenu=menuBuilder.addSubMenu(R.id.songmenu_groupplaylist,10000,1,R.string.addsongplaylist).setIcon(R.drawable.baseline_add_black_18dp);
                 if(playlists!=null) {
 
                     if (playlists.size() > 0) {
@@ -117,7 +117,7 @@ public class SonglistAdapter extends RecyclerView.Adapter<SonglistAdapter.ViewHo
                         }
                     }
 
-                        subMenu.add(1, playlists.size(),playlists.size(),"Thêm playlist" ).setIcon(R.drawable.baseline_add_black_18dp);
+                        subMenu.add(1, playlists.size(),playlists.size(),R.string.addplaylist ).setIcon(R.drawable.baseline_add_black_18dp);
 
 
 
@@ -135,9 +135,9 @@ public class SonglistAdapter extends RecyclerView.Adapter<SonglistAdapter.ViewHo
                                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                                         if (!dataSnapshot.child(user.name).child("playlist").child(playlistname).hasChild(songid)) {
                                             mDatabase.child(user.name).child("playlist").child(playlistname).child(songid).setValue(songid);
-                                            Toast.makeText(context, "Bạn đã thêm bài hát này vào playlist " + playlistname, Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(context, R.string.youhaveadd + playlistname, Toast.LENGTH_SHORT).show();
                                         } else {
-                                            Toast.makeText(context, "Bài hát đã tồn tại", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(context, R.string.existsong, Toast.LENGTH_SHORT).show();
                                         }
                                     }
 
@@ -243,7 +243,7 @@ public class SonglistAdapter extends RecyclerView.Adapter<SonglistAdapter.ViewHo
 
 
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        builder.setTitle("Tạo một thư mực ....");
+        builder.setTitle(R.string.createafolder);
 
         // Set up the input
         final EditText input = new EditText(context);
@@ -253,7 +253,7 @@ public class SonglistAdapter extends RecyclerView.Adapter<SonglistAdapter.ViewHo
         builder.setView(input);
 
         // Set up the buttons
-        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 m_Text = input.getText().toString();
@@ -263,12 +263,12 @@ public class SonglistAdapter extends RecyclerView.Adapter<SonglistAdapter.ViewHo
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         if(!dataSnapshot.child(user.name).child("playlist").hasChild(m_Text)){
                             createButton(m_Text);
-                            Toast.makeText(context,"Ban đã tạo playlist "+m_Text,Toast.LENGTH_SHORT).show();
+                            Toast.makeText(context,R.string.youhavecreateplaylist+m_Text,Toast.LENGTH_SHORT).show();
                             playlists.add(m_Text);
                             notifyDataSetChanged();
                         }
                         else{
-                            Toast.makeText(context,"Playlist đã tồn tại",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(context,R.string.existplaylist,Toast.LENGTH_SHORT).show();
 
                         }
                     }
@@ -281,7 +281,7 @@ public class SonglistAdapter extends RecyclerView.Adapter<SonglistAdapter.ViewHo
 
             }
         });
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.cancel();

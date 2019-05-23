@@ -5,7 +5,7 @@
 
     <string name="search">Tìm kiếm</string>
     <string name="title">30 Club Music</string>
-    <string name="signin">Sign in</string>
+    <string name="signin">Đăng nhập</string>
     <string name="browse">Browse</string>
     <string name="list">List</string>
     <string name="engvi">Eng/Vi</string>
@@ -22,7 +22,7 @@
     <string name="error">Tên đã có người sử dụng</string>
     <string name="ok">OK</string>
     <string name="wrongInfo">Thông tin đăng nhập không chính xác, vui lòng kiếm tra lại </string>
-    <string name="title_activity_sign_up">Sign up</string>
+    <string name="title_activity_sign_up">Đăng kí</string>
     <string name="rememberMe">Ghi nhớ đăng nhập</string>
     <string name="connectionLost">Vui lòng kiểm tra kết nối mạng</string>
     <string name="myplaylist">Play list của tôi</string>
@@ -43,11 +43,10 @@
     <string name="cancel">Huỷ</string>
     <string name="blank">Vui lòng không bỏ trống ô này </string>
     <string name="registerOK">Tạo tài khoản thành công.</string>
-    <string name="title_activity_forget_password">Forget Password</string>
     <string name="error_invalid_email">Địa chỉ email không hợp lệ!</string>
     <string name="error_invalid_password">Password cần lớn hơn 4 kí tự</string>
     <string name="invalidDate">Ngày sinh không hợp lệ </string>
-    <string name="send">Send</string>
+    <string name="send">Gửi</string>
     <string name="emailNotFound">Email không chính xác </string>
     <string name="infoNotFound"> Không tìm thấy người dùng này.</string>
     <string name="passwordGenerated">Mật khẩu mới đã được gửi đến email của bạn.</string>
@@ -55,7 +54,7 @@
 
     <!--  String related to userInformation    -->
     <string name="title_activity_user_information">Thông tin cá nhân</string>
-    <string name="I_userName">Tên người dùng : </string>
+    <string name="I_userName">Tên Người Dùng :</string>
     <string name="I_email">Email : </string>
     <string name="role">Loại tài khoản : </string>
     <string name="updateInfo">Chỉnh sửa thông tin</string>
@@ -79,9 +78,33 @@
     <!--String used to set boom-menu-->
     <string name="userInfo">Thông tin cá nhân</string>
     <string name="showAlbum">Album</string>
-    <string name="onlinemusic">Online Music</string>
+    <string name="onlinemusic">Nhạc Online</string>
     <string name="feedback">Góp ý</string>
     <string name="admin">Quản lí người dùng</string>
+    <string name="title_activity_forget_password">Quên mật khẩu</string>
+    <string name="off_music">Nhạc Offline</string>
+    <string name="featruetheme">Thể loại nổi bật</string>
+    <string name="more">Xem thêm</string>
+
+    <string name="maybeyoulike">Có thể bạn thích</string>
+    <string name="nodata">Không có dữ liệu</string>
+    <string name="moreplaylist">Xem thêm playlist</string>
+    <string name="featuredplaylist">Playlist nổi bật</string>
+    <string name="hotalbum">Album hot</string>
+    <string name="alltheme">Tất cả chủ đề</string>
+    <string name="allstyle">Tất cả thể loại</string>
+    <string name="themeandstyle">Chủ đề và thể loại</string>
+    <string name="homepage">Trang chủ</string>
+    <string name="searchfrag">Tìm kiếm</string>
+    <string name="addsongplaylist">Thêm bài hát vào playlist</string>
+    <string name="addplaylist">Thêm playlist</string>
+    <string name="youhaveadd">Bạn đã thêm bài hát vào playlist</string>
+    <string name="existsong">Bài hát đã tồn tại trong playlist</string>
+    <string name="createafolder">Tạo một thư mục...</string>
+    <string name="downloadsong">Tải về bài hát</string>
+    <string name="youhavecreateplaylist">Bạn đã tạo playlist</string>
+    <string name="existplaylist">Playlist đã tồn tại</string>
+
     <!--end of boom-menu's String-->
 
 </resources>

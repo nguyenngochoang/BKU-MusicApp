@@ -6,7 +6,7 @@
     <group android:id="@+id/songmenu_groupplaylist">
     <item
 
-        android:title="Tải về bài hát"
+        android:title="@string/downloadsong"
         android:id="@+id/songmenu_download"
         android:icon="@drawable/baseline_arrow_downward_black_18dp"
         />

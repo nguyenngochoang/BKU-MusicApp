@@ -10,7 +10,7 @@
         android:gravity="center"
         android:textSize="20sp"
         android:textColor="#3b3e3d"
-        android:text="playlist nổi bật"
+        android:text="@string/featuredplaylist"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <ListView
@@ -22,7 +22,7 @@
     </ListView>
     <TextView
         android:id="@+id/fragment_playlist_more"
-        android:text="xem thêm playlist"
+        android:text="@string/moreplaylist"
         android:drawablePadding="10dp"
         android:drawableLeft="@drawable/iconmoreplaylist"
         android:paddingLeft="5dp"

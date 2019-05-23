@@ -67,7 +67,7 @@ public class AllthemeandStyleActivity extends AppCompatActivity {
     private void init() {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("Chủ đề và thể loại");
+        getSupportActionBar().setTitle(R.string.themeandstyle);
         toolbar.setTitleTextColor(getResources().getColor(R.color.violet));
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

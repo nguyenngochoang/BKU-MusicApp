@@ -116,7 +116,7 @@ public class OfflineActivity extends AppCompatActivity {
     private void init() {
 
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Offline music");
+        getSupportActionBar().setTitle(R.string.off_music);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar.setTitleTextColor(getResources().getColor(R.color.violet));
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {

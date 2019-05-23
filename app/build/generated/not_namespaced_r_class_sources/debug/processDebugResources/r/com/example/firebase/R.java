@@ -3519,7 +3519,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td>direct, barriers, chains</td></tr>
+     * <tr><td>direct</td><td>1</td><td></td></tr>
      * <tr><td>groups</td><td>20</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>7</td><td></td></tr>
@@ -6019,101 +6019,122 @@ public final class R {
     public static final int action_settings=0x7f0d0021;
     public static final int action_sign_in=0x7f0d0022;
     public static final int action_sign_in_short=0x7f0d0023;
-    public static final int admin=0x7f0d0024;
-    public static final int app_name=0x7f0d0025;
-    public static final int appbar_scrolling_view_behavior=0x7f0d0026;
-    public static final int blank=0x7f0d0027;
-    public static final int bottom_sheet_behavior=0x7f0d0028;
-    public static final int browse=0x7f0d0029;
-    public static final int cancel=0x7f0d002a;
-    public static final int change=0x7f0d002b;
-    public static final int character_counter_pattern=0x7f0d002c;
-    public static final int common_google_play_services_enable_button=0x7f0d002d;
-    public static final int common_google_play_services_enable_text=0x7f0d002e;
-    public static final int common_google_play_services_enable_title=0x7f0d002f;
-    public static final int common_google_play_services_install_button=0x7f0d0030;
-    public static final int common_google_play_services_install_text=0x7f0d0031;
-    public static final int common_google_play_services_install_title=0x7f0d0032;
-    public static final int common_google_play_services_notification_channel_name=0x7f0d0033;
-    public static final int common_google_play_services_notification_ticker=0x7f0d0034;
-    public static final int common_google_play_services_unknown_issue=0x7f0d0035;
-    public static final int common_google_play_services_unsupported_text=0x7f0d0036;
-    public static final int common_google_play_services_update_button=0x7f0d0037;
-    public static final int common_google_play_services_update_text=0x7f0d0038;
-    public static final int common_google_play_services_update_title=0x7f0d0039;
-    public static final int common_google_play_services_updating_text=0x7f0d003a;
-    public static final int common_google_play_services_wear_update_text=0x7f0d003b;
-    public static final int common_open_on_phone=0x7f0d003c;
-    public static final int common_signin_button_text=0x7f0d003d;
-    public static final int common_signin_button_text_long=0x7f0d003e;
-    public static final int connectionLost=0x7f0d003f;
-    public static final int create=0x7f0d0040;
-    public static final int createPlaylist=0x7f0d0041;
-    public static final int date=0x7f0d0042;
-    public static final int default_web_client_id=0x7f0d0043;
-    public static final int emailNotFound=0x7f0d0044;
-    public static final int engvi=0x7f0d0045;
-    public static final int error=0x7f0d0046;
-    public static final int error_invalid_email=0x7f0d0047;
-    public static final int error_invalid_password=0x7f0d0048;
-    public static final int feedback=0x7f0d0049;
-    public static final int female=0x7f0d004a;
-    public static final int firebase_database_url=0x7f0d004b;
-    public static final int forget=0x7f0d004c;
-    public static final int gcm_defaultSenderId=0x7f0d004d;
-    public static final int gender=0x7f0d004e;
-    public static final int google_api_key=0x7f0d004f;
-    public static final int google_app_id=0x7f0d0050;
-    public static final int google_crash_reporting_api_key=0x7f0d0051;
-    public static final int google_storage_bucket=0x7f0d0052;
-    public static final int infoNotFound=0x7f0d0053;
-    public static final int infochanged=0x7f0d0054;
-    public static final int invalidDate=0x7f0d0055;
-    public static final int list=0x7f0d0056;
-    public static final int login=0x7f0d0057;
-    public static final int logout=0x7f0d0058;
-    public static final int male=0x7f0d0059;
-    public static final int myplaylist=0x7f0d005a;
-    public static final int name=0x7f0d005b;
-    public static final int nav_header_desc=0x7f0d005c;
-    public static final int nav_header_subtitle=0x7f0d005d;
-    public static final int nav_header_title=0x7f0d005e;
-    public static final int navigation_drawer_close=0x7f0d005f;
-    public static final int navigation_drawer_open=0x7f0d0060;
-    public static final int ok=0x7f0d0061;
-    public static final int onlinemusic=0x7f0d0062;
-    public static final int others=0x7f0d0063;
-    public static final int pass=0x7f0d0064;
-    public static final int passwordGenerated=0x7f0d0065;
-    public static final int password_toggle_content_description=0x7f0d0066;
-    public static final int passwordmatch=0x7f0d0067;
-    public static final int path_password_eye=0x7f0d0068;
-    public static final int path_password_eye_mask_strike_through=0x7f0d0069;
-    public static final int path_password_eye_mask_visible=0x7f0d006a;
-    public static final int path_password_strike_through=0x7f0d006b;
-    public static final int project_id=0x7f0d006c;
-    public static final int prompt_email=0x7f0d006d;
-    public static final int prompt_password=0x7f0d006e;
-    public static final int registerOK=0x7f0d006f;
-    public static final int rememberMe=0x7f0d0070;
-    public static final int retypepass=0x7f0d0071;
-    public static final int role=0x7f0d0072;
-    public static final int search=0x7f0d0073;
-    public static final int search_hint=0x7f0d0074;
-    public static final int search_menu_title=0x7f0d0075;
-    public static final int send=0x7f0d0076;
-    public static final int showAlbum=0x7f0d0077;
-    public static final int signin=0x7f0d0078;
-    public static final int status_bar_notification_info_overflow=0x7f0d0079;
-    public static final int title=0x7f0d007a;
-    public static final int title_activity_forget_password=0x7f0d007b;
-    public static final int title_activity_main_menu=0x7f0d007c;
-    public static final int title_activity_sign_up=0x7f0d007d;
-    public static final int title_activity_user_information=0x7f0d007e;
-    public static final int updateInfo=0x7f0d007f;
-    public static final int userInfo=0x7f0d0080;
-    public static final int username=0x7f0d0081;
-    public static final int wrongInfo=0x7f0d0082;
+    public static final int addplaylist=0x7f0d0024;
+    public static final int addsongplaylist=0x7f0d0025;
+    public static final int admin=0x7f0d0026;
+    public static final int allstyle=0x7f0d0027;
+    public static final int alltheme=0x7f0d0028;
+    public static final int app_name=0x7f0d0029;
+    public static final int appbar_scrolling_view_behavior=0x7f0d002a;
+    public static final int blank=0x7f0d002b;
+    public static final int bottom_sheet_behavior=0x7f0d002c;
+    public static final int browse=0x7f0d002d;
+    public static final int cancel=0x7f0d002e;
+    public static final int change=0x7f0d002f;
+    public static final int character_counter_pattern=0x7f0d0030;
+    public static final int common_google_play_services_enable_button=0x7f0d0031;
+    public static final int common_google_play_services_enable_text=0x7f0d0032;
+    public static final int common_google_play_services_enable_title=0x7f0d0033;
+    public static final int common_google_play_services_install_button=0x7f0d0034;
+    public static final int common_google_play_services_install_text=0x7f0d0035;
+    public static final int common_google_play_services_install_title=0x7f0d0036;
+    public static final int common_google_play_services_notification_channel_name=0x7f0d0037;
+    public static final int common_google_play_services_notification_ticker=0x7f0d0038;
+    public static final int common_google_play_services_unknown_issue=0x7f0d0039;
+    public static final int common_google_play_services_unsupported_text=0x7f0d003a;
+    public static final int common_google_play_services_update_button=0x7f0d003b;
+    public static final int common_google_play_services_update_text=0x7f0d003c;
+    public static final int common_google_play_services_update_title=0x7f0d003d;
+    public static final int common_google_play_services_updating_text=0x7f0d003e;
+    public static final int common_google_play_services_wear_update_text=0x7f0d003f;
+    public static final int common_open_on_phone=0x7f0d0040;
+    public static final int common_signin_button_text=0x7f0d0041;
+    public static final int common_signin_button_text_long=0x7f0d0042;
+    public static final int connectionLost=0x7f0d0043;
+    public static final int create=0x7f0d0044;
+    public static final int createPlaylist=0x7f0d0045;
+    public static final int createafolder=0x7f0d0046;
+    public static final int date=0x7f0d0047;
+    public static final int default_web_client_id=0x7f0d0048;
+    public static final int downloadsong=0x7f0d0049;
+    public static final int emailNotFound=0x7f0d004a;
+    public static final int engvi=0x7f0d004b;
+    public static final int error=0x7f0d004c;
+    public static final int error_invalid_email=0x7f0d004d;
+    public static final int error_invalid_password=0x7f0d004e;
+    public static final int existplaylist=0x7f0d004f;
+    public static final int existsong=0x7f0d0050;
+    public static final int featruetheme=0x7f0d0051;
+    public static final int featuredplaylist=0x7f0d0052;
+    public static final int feedback=0x7f0d0053;
+    public static final int female=0x7f0d0054;
+    public static final int firebase_database_url=0x7f0d0055;
+    public static final int forget=0x7f0d0056;
+    public static final int gcm_defaultSenderId=0x7f0d0057;
+    public static final int gender=0x7f0d0058;
+    public static final int google_api_key=0x7f0d0059;
+    public static final int google_app_id=0x7f0d005a;
+    public static final int google_crash_reporting_api_key=0x7f0d005b;
+    public static final int google_storage_bucket=0x7f0d005c;
+    public static final int homepage=0x7f0d005d;
+    public static final int hotalbum=0x7f0d005e;
+    public static final int infoNotFound=0x7f0d005f;
+    public static final int infochanged=0x7f0d0060;
+    public static final int invalidDate=0x7f0d0061;
+    public static final int list=0x7f0d0062;
+    public static final int login=0x7f0d0063;
+    public static final int logout=0x7f0d0064;
+    public static final int male=0x7f0d0065;
+    public static final int maybeyoulike=0x7f0d0066;
+    public static final int more=0x7f0d0067;
+    public static final int moreplaylist=0x7f0d0068;
+    public static final int myplaylist=0x7f0d0069;
+    public static final int name=0x7f0d006a;
+    public static final int nav_header_desc=0x7f0d006b;
+    public static final int nav_header_subtitle=0x7f0d006c;
+    public static final int nav_header_title=0x7f0d006d;
+    public static final int navigation_drawer_close=0x7f0d006e;
+    public static final int navigation_drawer_open=0x7f0d006f;
+    public static final int nodata=0x7f0d0070;
+    public static final int off_music=0x7f0d0071;
+    public static final int ok=0x7f0d0072;
+    public static final int onlinemusic=0x7f0d0073;
+    public static final int others=0x7f0d0074;
+    public static final int pass=0x7f0d0075;
+    public static final int passwordGenerated=0x7f0d0076;
+    public static final int password_toggle_content_description=0x7f0d0077;
+    public static final int passwordmatch=0x7f0d0078;
+    public static final int path_password_eye=0x7f0d0079;
+    public static final int path_password_eye_mask_strike_through=0x7f0d007a;
+    public static final int path_password_eye_mask_visible=0x7f0d007b;
+    public static final int path_password_strike_through=0x7f0d007c;
+    public static final int project_id=0x7f0d007d;
+    public static final int prompt_email=0x7f0d007e;
+    public static final int prompt_password=0x7f0d007f;
+    public static final int registerOK=0x7f0d0080;
+    public static final int rememberMe=0x7f0d0081;
+    public static final int retypepass=0x7f0d0082;
+    public static final int role=0x7f0d0083;
+    public static final int search=0x7f0d0084;
+    public static final int search_hint=0x7f0d0085;
+    public static final int search_menu_title=0x7f0d0086;
+    public static final int searchfrag=0x7f0d0087;
+    public static final int send=0x7f0d0088;
+    public static final int showAlbum=0x7f0d0089;
+    public static final int signin=0x7f0d008a;
+    public static final int status_bar_notification_info_overflow=0x7f0d008b;
+    public static final int themeandstyle=0x7f0d008c;
+    public static final int title=0x7f0d008d;
+    public static final int title_activity_forget_password=0x7f0d008e;
+    public static final int title_activity_main_menu=0x7f0d008f;
+    public static final int title_activity_sign_up=0x7f0d0090;
+    public static final int title_activity_user_information=0x7f0d0091;
+    public static final int updateInfo=0x7f0d0092;
+    public static final int userInfo=0x7f0d0093;
+    public static final int username=0x7f0d0094;
+    public static final int wrongInfo=0x7f0d0095;
+    public static final int youhaveadd=0x7f0d0096;
+    public static final int youhavecreateplaylist=0x7f0d0097;
   }
   public static final class style {
     public static final int AlertDialog_AppCompat=0x7f0e0000;
@@ -13144,7 +13165,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td>direct, barriers, chains</td></tr>
+     * <tr><td>direct</td><td>1</td><td></td></tr>
      * <tr><td>groups</td><td>20</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>7</td><td></td></tr>
@@ -14997,9 +15018,8 @@ public final class R {
       0x7f03010f, 0x7f030110
     };
     /**
-     * <p>
-     * @attr description
-     * Default Android attrs
+     * <p>This symbol is the offset where the {@link android.R.attr#enabled}
+     * attribute's value can be found in the {@link #FancyButtonsAttrs} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".

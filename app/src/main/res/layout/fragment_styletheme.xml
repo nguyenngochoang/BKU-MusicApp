@@ -16,12 +16,13 @@
             android:textSize="20sp"
             android:textColor="#3b3e3d"
             android:textStyle="bold"
-            android:text="chủ đề và thể loại nổi bật"
+
+            android:text="@string/featruetheme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <TextView
             android:id="@+id/fragment_styletheme_more"
-            android:text="xem thêm"
+            android:text="@string/more"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"
             android:paddingRight="15dp"
